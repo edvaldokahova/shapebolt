@@ -6,6 +6,7 @@
     <meta name="description" content="Discover the hidden formula that has transformed top athletes, models, and actors. Your journey starts now.">
     <meta name="keywords" content="fitness, transformation, ShapeBolt, weight loss, exclusive method">
     <meta name="author" content="ShapeBolt™">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>ShapeBolt™ - Exclusive Transformation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +14,7 @@
 
     <!-- Header -->
     <header>
-        <img src="logo.png" alt="ShapeBolt™ Logo">
+        <img src="images/logo.png" alt="ShapeBolt™ Logo">
     </header>
 
     <!-- Main Content -->
@@ -25,7 +26,7 @@
     <section class="content">
         <div class="section">
             <h2>The Resurrection</h2>
-            <img src="resurrection.jpg" alt="The Resurrection">
+            <img src="images/resurrection.jpg" alt="The Resurrection">
             <p>Something is about to change. You feel it. And that’s exactly why you are here.</p>
             <p>It has always been within your reach, but you never knew where to look. Now, the door is open. But only you can decide to walk through it. Are you ready?</p>
             <p>For years, this has been kept a secret. Only the greatest – actors, models, athletes – had access. But now the time has come. We will reveal everything to you, with nothing hidden.</p>
@@ -35,7 +36,7 @@
 
         <div class="section">
             <h2>The Hidden Formula</h2>
-            <img src="hidden_formula.jpg" alt="The Hidden Formula">
+            <img src="images/hidden_formula.jpg" alt="The Hidden Formula">
             <p>Inside this package, there's something few people know. At first glance, it seems simple. But this simplicity hides all its magic.</p>
             <p>It might not make sense now, but one thing is certain: this can change your life.</p>
             <p>You could ignore it... but you shouldn’t.</p>
@@ -44,26 +45,29 @@
 
         <div class="section">
             <h2>The Ritual of Truth</h2>
-            <img src="ritual.jpg" alt="The Ritual of Truth">
+            <img src="images/ritual.jpg" alt="The Ritual of Truth">
             <p>A unique experience, reserved for those who dare to move forward. A journey with no return.</p>
             <p>Some hesitate out of fear of change, while others choose to discover and are rewarded for their courage. Which side do you want to be on?</p>
         </div>
 
         <div class="section">
             <h2>The Last Step</h2>
-            <img src="last_step.jpg" alt="The Last Step">
+            <img src="images/last_step.jpg" alt="The Last Step">
             <p>The choice is yours: continue as usual or allow yourself to see beyond.</p>
             <p>But pay close attention: this decision defines everything.</p>
             <p>Embrace the journey, not the destination. Only then will you truly arrive.</p>
         </div>
 
-        <button id="discoverBtn">Discover Now</button>
+        <button id="discoverBtn" onclick="openModal('formModal')">Discover Now</button>
     </section>
 
     <!-- Form Modal -->
     <div id="formModal" class="modal">
         <div class="modal-content">
-            <iframe src="form.html"></iframe>
+            <iframe data-tally-src="https://tally.so/embed/mRkOEd?dynamicHeight=1" 
+                loading="lazy" width="100%" height="600" 
+                frameborder="0" marginheight="0" marginwidth="0" 
+                title="Formulário"></iframe>
         </div>
     </div>
 
@@ -76,6 +80,17 @@
             <p>At ShapeBolt™, we believe that true transformation starts from within. We are not just a company – we are your partner on the journey to achieving your best version, both physically and mentally.</p>
             <p>Our mission is to empower individuals to push their limits and reach their maximum potential. We combine innovation, quality, and expertise to create products and services that not only meet but exceed expectations.</p>
             <p>We are committed to helping you turn your goals into reality, focusing on excellence and holistic well-being.</p>
+        </div>
+    </div>
+
+    <!-- Return Modal with Timer -->
+    <div id="returnModal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome back!</h2>
+            <p>Have you secured your exclusive offer?</p>
+            <img src="images/product.png" alt="Exclusive Product" style="width: 150px; display: block; margin: 10px auto;">
+            <a href="https://aeroslim24.com/text.php#aff=edvaldocahova" id="offerBtn" class="offer-button" target="_blank">Claim My Offer</a>
+            <p id="timer" style="margin-top: 10px;"></p>
         </div>
     </div>
 
@@ -115,17 +130,13 @@
         </div>
     </div>
 
-    <!-- Return Modal with Timer -->
-    <div id="returnModal" class="modal">
-        <div class="modal-content">
-            <h2>Welcome back!</h2>
-            <p>Have you secured your exclusive offer?</p>
-            <img src="product.jpg" alt="Exclusive Product" style="width: 150px; display: block; margin: 10px auto;">
-            <button id="offerBtn">Claim My Offer</button>
-            <p id="timer" style="margin-top: 10px;"></p>
-        </div>
-    </div>
-
+   <!-- Contact Section  -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach us at:</p>
+        <p><a href="mailto:contact@shapebolt.com">contact@shapebolt.store</a></p>
+    </section>
+    
     <!-- Footer -->
     <footer>
         <p>© 2020-2025 ShapeBolt.store. All rights reserved.</p>
@@ -134,5 +145,18 @@
         <a href="#" onclick="openModal('privacyModal')">Privacy Policy</a>
     </footer>
 
+    <!-- Script do Tally Forms -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+    </script>
+
 </body>
-      </html>
+    </html>
