@@ -127,3 +127,27 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.offer-button {
+    display: inline-block;
+    background-color: #ff6600; /* Cor chamativa */
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.offer-button:hover {
+    background-color: #e55b00;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Isso centraliza verticalmente */
+}
