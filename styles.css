@@ -1,0 +1,129 @@
+/* Basic reset for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #222;
+    padding: 20px;
+}
+
+header img {
+    max-width: 200px;
+}
+
+/* Hero Section */
+.hero {
+    background: #ffcc00;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Main Content */
+.content {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff8800;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Button */
+button {
+    background: #ff5500;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #ff3300;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ffcc00;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
