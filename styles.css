@@ -167,3 +167,14 @@ footer a:hover {
     border-radius: 10px;
     text-align: center;
 }
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    max-height: 80vh; /* Define a altura máxima relativa à tela */
+    overflow-y: auto; /* Ativa a rolagem vertical caso o conteúdo seja maior */
+}
