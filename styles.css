@@ -101,7 +101,7 @@ button:hover {
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
-    text-align: left;
+    text-align: Center;
 }
 
 .close {
@@ -181,10 +181,21 @@ footer a:hover {
 
 .section p {
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: none;
     hyphens: auto;
     line-height: 1.8;
-    word-spacing: 1.5px;
-    letter-spacing: 0.5px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
     margin-bottom: 20px; /* Espaçamento entre os parágrafos */
 } 
+
+.section {
+    max-width: 800px; /* Aumenta o espaço para o texto */
+    width: 90%; /* Garante que ocupe mais espaço na tela */
+}
+
+@media (max-width: 768px) {
+    .section {
+        max-width: 95%; /* Ajusta melhor para celulares */
+    }
+}
