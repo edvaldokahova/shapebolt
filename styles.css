@@ -179,12 +179,12 @@ footer a:hover {
     overflow-y: auto; /* Ativa a rolagem vertical caso o conteúdo seja maior */
 }
 
-p {
+.section p {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
     line-height: 1.8;
-    word-spacing: 2px;
+    word-spacing: 1.5px;
     letter-spacing: 0.5px;
-    margin-bottom: 20px; /* Aumenta o espaçamento entre os parágrafos */
-}
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+} 
