@@ -208,7 +208,7 @@ footer a:hover {
     }
 
     .content {
-        padding: 20px;
+        padding: 23px;
         width: 100%;
     }
 
@@ -222,12 +222,12 @@ footer a:hover {
     }
 
     .section p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .modal-content {
         width: 95%;
-        padding: 20px;
+        padding: 30px;
     }
 
     .offer-button {
