@@ -234,4 +234,41 @@ footer a:hover {
         font-size: 16px;
         padding: 10px 15px;
     }
+    
+/* Estilização do Cronômetro */
+.timer {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff5500;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Posicionamento no canto superior direito */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Ajustes dentro do modal */
+.modal-content {
+    background: white;
+    width: 95%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.6;
+    position: relative; /* Para que o cronômetro se posicione em relação a ele */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timer {
+        font-size: 1.5rem;
+        top: 5px;
+        right: 10px;
+        padding: 8px 12px;
     }
+}
