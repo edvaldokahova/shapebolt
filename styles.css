@@ -181,7 +181,8 @@ footer a:hover {
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
-    text-align: center;
+    text-align: justify;
+    text-justify: none;
     max-height: 80vh;
     overflow-y: auto;
 }
