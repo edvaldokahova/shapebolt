@@ -45,7 +45,6 @@ header img {
     max-width: 800px;
     width: 95%;
     margin: 0 auto;
-    padding: 25px;
 }
 
 .section {
@@ -54,6 +53,8 @@ header img {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Aumenta o espaço para o texto */
+    width: 96%; /* Garante que ocupe mais espaço na tela */
 }
 
 .section h2 {
@@ -66,6 +67,15 @@ header img {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
+}
+
+.section p {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.8;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
 }
 
 /* Button */
@@ -103,12 +113,10 @@ button:hover {
     padding: 30px;
     width: 80%;
     max-width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 10px;
-    text-align: Center;
+    text-align: justify;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .close {
@@ -135,6 +143,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Offer Button */
 .offer-button {
     display: inline-block;
     background-color: #ff6600; /* Cor chamativa */
@@ -152,6 +161,7 @@ footer a:hover {
     background-color: #e55b00;
 }
 
+/* Offer Container */
 .offer-container {
     display: flex;
     justify-content: center;
@@ -159,8 +169,9 @@ footer a:hover {
     height: 100vh; /* Isso centraliza verticalmente */
 }
 
+/* Return Modal */
 #returnModal1 {
-    display: none; /* Inicialmente oculto */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 50%;
@@ -173,31 +184,4 @@ footer a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    text-align: justify;
-    text-justify: none;
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-.section p {
-    text-align: justify;
-    text-justify: none;
-    hyphens: auto;
-    line-height: 1.8;
-    word-spacing: 0px;
-    letter-spacing: 0px;
-    margin-bottom: 20px;
-} 
-
-.section {
-    max-width: 800px; /* Aumenta o espaço para o texto */
-    width: 96%; /* Garante que ocupe mais espaço na tela */
 }
