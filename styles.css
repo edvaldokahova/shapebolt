@@ -17,10 +17,13 @@ body {
 header {
     background: #222;
     padding: 20px;
+    text-align: center;
 }
 
 header img {
     max-width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Hero Section */
@@ -92,7 +95,8 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 20px auto;
+    display: block;
 }
 
 button:hover {
@@ -142,12 +146,17 @@ button:hover {
     cursor: pointer;
 }
 
+.contact-section {
+    text-align: center;
+}
+
 /* Footer */
 footer {
     background: #222;
     color: white;
     padding: 30px;
     margin-top: 30px;
+    text-align: center;
 }
 
 footer a {
