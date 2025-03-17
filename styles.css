@@ -28,14 +28,14 @@ header img {
 
 /* Hero Section */
 .hero {
-    background: #ffcc00;
+    background: #0000ff;
     padding: 50px 20px;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     font-family: "Arial Black", Arial, sans-serif;
-    color: #222;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -67,7 +67,7 @@ header img {
     font-size: 2rem;
     font-family: "Arial Black", Arial, sans-serif;
     margin-bottom: 15px;
-    color: #ff8800;
+    color: #0000ff;
     text-align: center;
 }
 
@@ -88,7 +88,7 @@ header img {
 
 /* Button */
 button {
-    background: #ff5500;
+    background: #0000ff;
     color: white;
     border: none;
     padding: 15px 25px;
@@ -100,7 +100,7 @@ button {
 }
 
 button:hover {
-    background: #ff3300;
+    background: #0000ff;
 }
 
 .button-container {
@@ -165,7 +165,7 @@ footer {
 }
 
 footer a {
-    color: #ffcc00;
+    color: #0000ff;
     margin: 0 10px;
     text-decoration: none;
 }
