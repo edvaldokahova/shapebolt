@@ -37,12 +37,14 @@ header img {
     font-family: "Arial Black", Arial, sans-serif;
     color: #ffffff;
     text-align: center;
+    font-weight: 900;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-top: 10px;
     text-align: center;
+    color: #ffffff;
 }
 
 /* Main Content */
@@ -69,6 +71,7 @@ header img {
     margin-bottom: 15px;
     color: #0000ff;
     text-align: center;
+    font-weight: 900;
 }
 
 .section img {
@@ -97,6 +100,7 @@ button {
     border-radius: 5px;
     margin-top: 20px auto;
     display: block;
+    margin: 0 auto;
 }
 
 button:hover {
@@ -106,6 +110,7 @@ button:hover {
 .button-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Modals - Mantém no centro */
