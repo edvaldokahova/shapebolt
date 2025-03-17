@@ -103,6 +103,11 @@ button:hover {
     background: #ff3300;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 /* Modals - Mantém no centro */
 .modal {
     display: none;
