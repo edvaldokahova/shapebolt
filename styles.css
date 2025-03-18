@@ -223,6 +223,34 @@ footer a:hover {
     text-align: center;
 }
 
+/* Botões dentro do modal */
+#returnModal1 button {
+    background: #0000ff; /* Azul no lugar do laranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+    
+#returnModal1 button:hover {
+    background: #0000cc; /* Azul mais escuro no hover */
+}
+
+/* Títulos e textos */
+#returnModal1 h2 {
+    color: #0000ff; /* Azul para títulos */
+    font-family: "Arial Black", Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+#returnModal1 p {
+    color: #333; /* Cor padrão para textos */
+    line-height: 1.6;
+}
+
 /* Responsividade para Celulares */
 @media (max-width: 768px) {
     .hero {
