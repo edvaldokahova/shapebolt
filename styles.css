@@ -331,3 +331,27 @@ footer a:hover {
         padding: 8px 12px;
     }
 }
+
+.video-section {
+       margin: 20px 0;
+   }
+
+   .video-container {
+       text-align: center;
+       max-width: 800px;
+       margin: 0 auto;
+   }
+
+   .video-container video {
+       width: 100%;
+       height: auto;
+   }
+
+   .video-caption {
+       margin-top: 10px;
+       background-color: #0000ff;
+       color: white;
+       padding: 10px;
+       border-radius: 5px;
+       font-size: 16px;
+   }
