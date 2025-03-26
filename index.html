@@ -126,6 +126,13 @@
         </div>
     </section>
 
+    <script>
+  // Rastreia cliques no botão "DISCOVER M06" sem botão extra
+  document.getElementById('discoverBtn').addEventListener('click', function() {
+    fbq('track', 'DiscoverNow_Click');
+  });
+    </script>
+
     <!-- Form Modal -->
         <div id="formModal" class="modal">
             <div class="modal-content">
