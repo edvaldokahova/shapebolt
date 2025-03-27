@@ -162,7 +162,7 @@ button:hover {
     text-color: #5aab48;
 }
 
-contact-section a:hover {
+.contact-section a:hover {
     color: #5aab48;
     text-decoration: underline;
     text-color: #5aab48;
@@ -364,3 +364,26 @@ footer a:hover {
        border-radius: 0;
        font-size: 16px;
    }
+
+/* ===== CORREÇÃO PARA O LINK DE E-MAIL ===== */
+/* Aplica a todos os links de e-mail dentro da seção de contato */
+#contact a[href^="mailto:"] {
+    color: #1943DA !important;         /* Verde principal */
+    text-decoration: none !important;
+    transition: color 0.2s ease !important; /* Transição suave */
+}
+
+/* Estados interativos */
+#contact a[href^="mailto:"]:hover,
+#contact a[href^="mailto:"]:focus,
+#contact a[href^="mailto:"]:active,
+#contact a[href^="mailto:"]:visited {
+    color: #5aab48 !important;         /* Verde mais escuro */
+    text-decoration: underline !important;
+    outline: none !important;          /* Remove contorno em alguns navegadores */
+}
+
+/* Remove efeitos de foco em navegadores como Firefox */
+#contact a[href^="mailto:"]::-moz-focus-inner {
+    border: 0 !important;
+    }
