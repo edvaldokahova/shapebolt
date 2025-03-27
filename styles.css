@@ -28,7 +28,7 @@ header img {
 
 /* Hero Section */
 .hero {
-    background: #0000ff;
+    background: #5aab48;
     padding: 50px 20px;
 }
 
@@ -171,7 +171,7 @@ footer {
 }
 
 footer a {
-    color: #0000ff;
+    color: ##5aab48;
     margin: 0 10px;
     text-decoration: none;
 }
@@ -226,7 +226,7 @@ footer a:hover {
 
 /* Botões dentro do modal */
 #returnModal1 button {
-    background: #0000ff; /* Azul no lugar do laranja */
+    background: #5aab48; /* Azul no lugar do laranja */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -242,7 +242,7 @@ footer a:hover {
 
 /* Títulos e textos */
 #returnModal1 h2 {
-    color: #0000ff; /* Azul para títulos */
+    color: #5aab48; /* Azul para títulos */
     font-family: "Arial Black", Arial, sans-serif;
     margin-bottom: 15px;
 }
@@ -349,7 +349,7 @@ footer a:hover {
 
    .video-caption {
        margin-top: 0;
-       background-color: #0000ff;
+       background-color: #5aab48;
        color: white;
        padding: 10px;
        border-radius: 0;
