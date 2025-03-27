@@ -26,22 +26,15 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1193795632404769');
     fbq('track', 'PageView');
-    fbq('track', 'DiscoverNow_Click');
+    fbq('track', 'DISCOVERNOW_Click');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none" 
          src="https://www.facebook.com/tr?id=1193795632404769&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
-
-  <script>
-  // Rastreia cliques no botão "DISCOVER M06" sem botão extra
-  document.getElementById('discoverBtn').addEventListener('click', function() {
-    fbq('track', 'DiscoverNow_Click');
-  });
-  </script>
-
-    <!-- Open Graph / Facebook -->
+    
+  <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shapebolt.store/" />
     <meta property="og:title" content="ShapeBolt™ - The Secret of Instant Transformation" />
