@@ -369,7 +369,7 @@ footer a:hover {
 /* Aplica a todos os links de e-mail dentro da seção de contato */
 #contact a[href^="mailto:"] {
     color: #1943DA !important;         /* Verde principal */
-    text-decoration: none !important;
+    text-decoration: underline !important;
     transition: color 0.2s ease !important; /* Transição suave */
 }
 
