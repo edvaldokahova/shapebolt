@@ -15,7 +15,7 @@ body {
 
 /* Header */
 header {
-    background: #222;
+    background: #ffffff;
     padding: 20px;
     text-align: center;
 }
@@ -184,7 +184,7 @@ footer a:hover {
 /* Offer Button */
 .offer-button {
     display: inline-block;
-    background-color: #5aab48; /* Cor chamativa */
+    background-color: #5aab48;
     color: white;
     padding: 12px 20px;
     text-align: center;
