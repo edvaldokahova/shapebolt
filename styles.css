@@ -159,6 +159,7 @@ button:hover {
 
 .contact-section {
     text-align: center;
+    text-color: #5aab48;
 }
 
 /* Footer */
@@ -171,14 +172,16 @@ footer {
 }
 
 footer a {
-    color: ##5aab48;
+    color: #ffffff;
     margin: 0 10px;
     text-decoration: none;
+    text-color: #ffffff;
 }
 
 footer a:hover {
     color: #5aab48;
     text-decoration: underline;
+    text-color: #5aab48;
 }
 
 /* Offer Button */
