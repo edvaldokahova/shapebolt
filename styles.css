@@ -177,7 +177,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffffff;
+    color: #5aab48;
     text-decoration: underline;
 }
 
@@ -226,7 +226,7 @@ footer a:hover {
 
 /* Botões dentro do modal */
 #returnModal1 button {
-    background: #5aab48; /* Azul no lugar do laranja */
+    background: #5aab48; 
     color: white;
     border: none;
     padding: 10px 20px;
