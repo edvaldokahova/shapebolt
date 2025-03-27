@@ -26,7 +26,6 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1193795632404769');
     fbq('track', 'PageView');
-    fbq('track', 'DiscoverNow_Click');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none" 
@@ -122,10 +121,17 @@
         </div>
 
             <div class="button-container">
-                <button id="discoverBtn" onClick="openModal('formModal')">DISCOVER NOW</button>
+                <button id="discoverBtn">DISCOVER NOW</button>
             </div>
         </div>
     </section>
+
+   <script>
+    document.getElementById('discoverBtn').addEventListener('click', function() {
+         openModal('formModal'); // Abre o modal
+         fbq('track', 'DiscoverNow_Click');
+    });
+   </script> 
 
     <!-- Form Modal -->
         <div id="formModal" class="modal">
