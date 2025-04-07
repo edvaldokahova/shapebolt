@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroSlim - Página Inicial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #dbaca0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff3f0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #b94e35;
+    }
+    .typing-text {
+      font-weight: bold;
+      color: #b94e35;
+      border-right: 2px solid #b94e35;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 210px }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #b94e35; }
+    }
+  </style>
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,285 +89,16 @@
     <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <img src="images/logo.png" alt="ShapeBolt™ Logo">
-    </header>
-
-    <!-- Main Content -->
-    <section class="hero">
-        <h1>Exclusive Transformation</h1>
-        <p>Find out how to dry the belly in 30 days without starving and exercising only 1 hour a day! Your journey starts now.</p>
-    </section>
-
-    <!-- Vídeo -->
-    <section class="video-section">
-       <div class="video-container">
-           <video controls>
-               <source src="images/VSL.mp4" type="video/mp4">
-               Your browser does not support the video element.
-           </video>
-           <div class="video-caption">
-               Hit Play On The Video
-           </div>
-       </div>
-    </section>
-
-    <section class="content">
-        <div class="section">
-            <h2>THE RESURRECTION</h2>
-            <img src="images/resurrection.jpg" alt="The Resurrection">
-            <p>Something extraordinary is about to happen. You feel it. And that's exactly why it's here.</p>
-            <p>There was a time when everything seemed simpler. You looked at the future with the conviction that things would work out. But at some point, something broke. The days started repeating themselves, and hope became a distant echo.</p>
-            <p>You tried. You really did. But every effort seemed in vain. Every promise made to you dissolved like smoke, leaving behind only a bitter taste of frustration.</p>
-            <p>What you may not know is that this was never your fault.</p>
-            <p>Has the truth always been hidden? Accessible only to the privileged—actors, models, elite athletes, people who simply couldn't afford to fail, to have the <strong>PERFECT BODY.</strong> His methods, hidden, were refined in silence, away from prying eyes.</p>
-            <p>While most struggle in a never-ending cycle of frustrating diets and false hopes, they follow a path that has always worked. After all, it's small details that cause you so much suffering and frustration.</p>
-            <p>And the most incredible thing? This answer has been within your reach your entire life, yet somehow, it always slipped away. As they say, if you want to hide something from someone, put it right in front of their eyes.</p>
-            <p><strong>But we are going to change that, TOGETHER!</strong></p>
-            <p>Maybe you think this is just another empty promise. After all, how many times have you tried and been disappointed?</p>
-            <p>It’s completely normal to hesitate—but you must take action as well. <strong>Time doesn’t stop!</strong></p>
-            <p>One way or another, the choice is still yours. But those who dared to move forward… Never looked back.</p>
-            <p><strong>When you’re ready, keep going.</strong></p>
-        </div>
-
-        <div class="section">
-            <h2>THE HIDDEN FORMULA</h2>
-            <img src="images/hidden_formula.jpg" alt="The Hidden Formula">
-            <p>There is something hidden inside this cup. Something that few people know about. First impressions can be deceiving because true transformation never announces itself with fanfare. It hides in the unexpected.</p>
-            <p>You might think you've tried everything—diets, exercises, or even pills. But if any of that truly worked, you wouldn’t be here now, reading these words, searching for a way out.</p>
-            <p>The truth? The problem was never you.</p>
-            <p>What if there was a simpler way? Something that doesn’t require impossible sacrifices or daily torture?</p>
-            <p>Does it sound too good to be true? Maybe. But ask yourself: do you really want to keep following this exhausting routine, or are you ready to see what has always been right in front of your eyes?</p>
-            <p><strong>Embrace the journey, not the destination—only then will you truly arrive!</strong></p>
-        </div>
-
-        <div class="section">
-            <h2>THE RITUAL OF TRUTH</h2>
-            <img src="images/ritual.jpg" alt="The Ritual of Truth">
-            <p>Now comes the part that separates the curious from the determined.</p>
-            <p>You know you need to change. You feel it every time you look in the mirror, every time exhaustion takes over, every time another plan fails.</p>
-            <p>But what’s stopping you? Fear? Doubt? Or simply the comfort of accepting that "this is just how things are"?</p>
-            <p>Let me be direct: those who hesitate, lose. They lose time. They lose confidence. They lose opportunities.</p>
-            <p>While you’re thinking, thousands of people have already made their decision—and today, they live the transformation you desire. They discovered what makes all the difference.</p>
-            <p>And now, you have the chance to join them.</p>
-            <p>But be careful... This is not just any choice. It’s a path of no return. Once you see the truth, there will be no more excuses.</p>
-            <p>If you've come this far, you already know what you need to do.</p>
-            <p><strong>What are you waiting for?</strong></p>
-        </div>
-
-        <div class="section">
-            <h2>THE LAST STEP</h2>
-            <img src="images/laststep.png" alt="The Last Step">
-            <p>This is the last frontier. From here on, only two possibilities remain:</p>
-            <p>1.Continue as always, waiting for miracles and getting frustrated with empty promises.</p>
-            <p>2.Make the only decision that truly matters and finally unlock your transformation.</p>
-            <p>There is no middle ground.</p>
-            <p>You’ve already felt how hard it is to try alone. You’ve already seen what happens when an important choice is postponed. But here’s a new chance.</p>
-            <p>There is only one perfect moment to change: <strong>NOW!</strong></p>
-        </div>
-
-            <div class="button-container">
-                <button id="discoverBtn">DISCOVER NOW</button>
-            </div>
-        </div>
-    </section>
-
-   <script>
-    document.getElementById('discoverBtn').addEventListener('click', function() {
-         openModal('formModal'); // Abre o modal
-         fbq('track', 'DiscoverNow_Click');
-    });
-   </script> 
-
-    <!-- Form Modal -->
-        <div id="formModal" class="modal">
-            <div class="modal-content">
-                <iframe data-tally-src="https://tally.so/embed/mRk0Ed?alignLeft=1&dynamicHeight=1" 
-                loading="lazy" width="100%" height="200" 
-                frameborder="0" marginheight="0" marginwidth="0" 
-                title="ShapeBolt - Form and Quiz">
-                 </iframe>
-            </div>
-        </div>
-
-    <script>
-    var d = document,
-        w = "https://tally.so/widgets/embed.js",
-        v = function() {
-            if (typeof Tally !== "undefined") {
-                Tally.loadEmbeds();
-            } else {
-                d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
-                    e.src = e.dataset.tallySrc;
-                });
-            }
-        };
-
-    if (typeof Tally !== "undefined") {
-        v();
-    } else if (d.querySelector('script[src="'+w+'"]') == null) {
-        var s = d.createElement("script");
-        s.src = w;
-        s.onload = v;
-        s.onerror = v;
-        d.body.appendChild(s);
-    }
-    </script>
-
-    <!-- About Us Modal -->
-    <div id="aboutModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('aboutModal')">&times;</span>
-            <h2>About Us</h2>
-            <p><strong>ShapeBolt™</strong> - Transforming lives for a better version.</p>
-            <p>At ShapeBolt™, we believe that true transformation starts from within. We are not just a company – we are your partner on the journey to achieving your best version, both physically and mentally.</p>
-            <p>Our mission is to empower individuals to push their limits and reach their maximum potential. We combine innovation, quality, and expertise to create products and services that not only meet but exceed expectations.</p>
-            <p>We are committed to helping you turn your goals into reality, focusing on excellence and holistic well-being.</p>
-        </div>
+   <header>
+    <div class="logo">
+      <h1>AeroSlim</h1>
     </div>
+    <nav class="menu">
+      <a href="about.html">About Us</a>
+      <a href="produtos.html">Outros Produtos</a>
+      <a href="https://exemplo-telemedicina.com" target="_blank">Consulta Médica</a>
+      <span class="typing-text">Saúde, Beleza e Felicidade</span>
+    </nav>
+   </header> 
 
-    <!-- Return Modal with Timer -->
-<div id="returnModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span id="closeReturnModal" style="cursor: pointer; float: right;">&times;</span>
-        <span id="timer">03:00:00</span>
-        <h2>Welcome back!</h2>
-        <p>Have you secured your exclusive offer?</p>
-        <img src="product.jpg" alt="Exclusive Product" style="width: 150px; display: block; margin: 10px auto;">
-        <a href="https://aeroslim24.com/text.php#aff=edvaldocahova" id="offerBtn" class="offer-button" target="_blank">Claim My Offer</a>
-    </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("returnModal");
-    const timerDisplay = document.getElementById("timer");
-    const closeModal = document.getElementById("closeReturnModal");
-
-    function startTimer(duration) {
-        let timer = duration;
-        const interval = setInterval(() => {
-            let hours = Math.floor(timer / 3600);
-            let minutes = Math.floor((timer % 3600) / 60);
-            let seconds = timer % 60;
-
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            timerDisplay.textContent = hours + ":" + minutes + ":" + seconds;
-
-            if (--timer < 0) {
-                clearInterval(interval);
-                localStorage.removeItem("returnTime");
-                modal.style.display = "none";
-            }
-        }, 1000);
-    }
-
-    function showModal() {
-        setTimeout(() => {
-            modal.style.display = "block";
-            localStorage.setItem("returnTime", Date.now() + 3 * 60 * 60 * 1000);
-            startTimer(3 * 60 * 60);
-        }, 3000);
-    }
-
-    function handleFormSubmit() {
-        localStorage.setItem("formCompleted", "true");
-    }
-
-    window.addEventListener("visibilitychange", function () {
-        if (document.hidden && localStorage.getItem("formCompleted") === "true") {
-            localStorage.setItem("returnTrigger", "true");
-        }
-    });
-
-    if (localStorage.getItem("returnTrigger") === "true") {
-        const returnTime = localStorage.getItem("returnTime");
-        if (returnTime && Date.now() < returnTime) {
-            modal.style.display = "block";
-            startTimer(Math.floor((returnTime - Date.now()) / 1000));
-        } else {
-            localStorage.removeItem("returnTime");
-            localStorage.removeItem("returnTrigger");
-        }
-    }
-
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Captura o envio do formulário
-    document.querySelector("#formModal iframe").contentWindow.addEventListener("submit", handleFormSubmit);
-});
-</script>
-
-    <!-- Terms of Service Modal -->
-    <div id="termsModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms of Service</h2>
-            <p>By accessing and using ShapeBolt™, you agree to the following terms and conditions:</p>
-            <ul>
-                <li>You confirm that you have read, understood, and accepted these Terms of Service.</li>
-                <li>We offer physical and digital products, training programs, and educational content.</li>
-                <li>You are responsible for providing accurate and updated information.</li>
-                <li>Unauthorized use of our content is strictly prohibited.</li>
-                <li>Refunds are available within 30 days for unused products in original packaging.</li>
-                <li>We are not liable for indirect damages or external disruptions.</li>
-                <li>These terms are subject to change, and updates will be communicated accordingly.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Privacy Policy Modal -->
-    <div id="privacyModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('privacyModal')">&times;</span>
-            <h2>Privacy Policy</h2>
-            <p>Your privacy is a priority at ShapeBolt™. We collect, use, and protect your information as follows:</p>
-            <ul>
-                <li>We collect personal details such as name, email, address, and payment data.</li>
-                <li>Usage data like visited pages and time spent on the site is recorded for optimization.</li>
-                <li>Cookies are used to enhance user experience.</li>
-                <li>We do not sell your data. It is only shared with trusted partners for payment processing and product delivery.</li>
-                <li>We implement advanced security measures to protect your information.</li>
-                <li>You have the right to access, correct, or delete your personal data.</li>
-                <li>Policy updates will be communicated through our website or email.</li>
-            </ul>
-        </div>
-    </div>
-
-   <!-- Contact Section  -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach us at:</p>
-        <p><a href="mailto:hello@shapebolt.store">hello@shapebolt.store</a></p>
-    </section>
     
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 ShapeBolt.store. All rights reserved.</p>
-        <a href="#AboutUs" onclick="openModal('aboutModal')">About Us</a>
-        <a href="#TermsofService" onclick="openModal('termsModal')">Terms of Service</a>
-        <a href="#PrivacyPolicy" onclick="openModal('privacyModal')">Privacy Policy</a>
-    </footer>
-
-    <!-- Script do Tally Forms -->
-    <script async src="https://tally.so/widgets/embed.js"></script>
-
-    <script>
-    function openModal(id) {
-        document.getElementById(id).style.display = "block";
-    }
-
-    function closeModal(id) {
-        document.getElementById(id).style.display = "none";
-    }
-    </script>
-
-</body>
-    </html>
