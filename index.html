@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AeroSlim™ - Página Inicial</title>
+<html lang="pt">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AeroSlim</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+     <header>
+      <img src="logo.png" alt="ShapeBolt Logo" class="logo" />
+      <nav>
+        <a href="#about">About Us</a>
+        <a href="#products">Outros Produtos</a>
+        <a href="https://plataforma-telemedicina.com" target="_blank">Consulta Médica</a>
+      </nav>
+     </header>
   
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
@@ -42,7 +55,103 @@
     <meta property="og:title" content="ShapeBolt™ - The Secret of Instant Transformation" />
     <meta property="og:description" content="How to dry the belly in 30 days without starving and exercising only 1 hour a day! Your journey starts now." />
     <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
-</head>
-<body>
-   
-    
+ </head>
+ <body>
+ 
+  <section class="hero">
+      <div class="hero-text">
+        <img src="logo.png" alt="Logo pequeno" class="logo-mini" />
+        <h1>Transforme seu corpo com AeroSlim</h1>
+        <p>O suplemento que redefine sua jornada de emagrecimento.</p>
+        <button onclick="document.getElementById('cta-final').scrollIntoView({ behavior: 'smooth' })">Garantir o meu</button>
+      </div>
+      <div class="hero-image">
+        <img src="hero-face.png" alt="Pessoa feliz" />
+      </div>
+    </section>
+
+    <section class="testemunhos">
+      <h2>O que dizem sobre o AeroSlim</h2>
+      <div class="carrossel-videos">
+        <video controls poster="poster1.jpg">
+          <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <video controls poster="poster2.jpg">
+          <source src="video2.mp4" type="video/mp4" />
+        </video>
+        <video controls poster="poster3.jpg">
+          <source src="video3.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="localizacoes">
+        <p><i class="fas fa-map-marker-alt"></i> Flórida</p>
+        <p><i class="fas fa-map-marker-alt"></i> Flórida</p>
+        <p><i class="fas fa-map-marker-alt"></i> Carolina do Sul</p>
+      </div>
+    </section>
+
+    <section class="beneficios">
+      <h2>Descubra por que o AeroSlim está virando febre</h2>
+      <div class="beneficio">
+        <img src="benef1.gif" />
+        <div>
+          <h3>Reduz o inchaço em questão de dias — não semanas</h3>
+          <p>Você já sentiu que está sempre “estufado”? AeroSlim combate a retenção de líquidos com ingredientes que limpam e desincham o seu corpo naturalmente, fazendo você se sentir mais leve logo nas primeiras cápsulas. Você notará a diferença sem precisar esperar semanas, relaxa e tome.</p>
+        </div>
+        <img src="benef2.gif" />
+        <div>
+          <h3>Tira você da estagnação metabólica</h3>
+          <p>Se você já fez dieta, treinou e mesmo assim não emagreceu, seu metabolismo pode estar travado. O AeroSlim foi desenvolvido para destravar essa engrenagem oculta e acelerar o processo de queima — sem exigir mudanças radicais no seu estilo de vida.</p>
+        </div>
+        <img src="benef3.gif" />
+        <div>
+          <h3>Efeito “reprogramação”: seu corpo aprende a queimar gordura por conta própria</h3>
+          <p>Ao invés de apenas queimar calorias momentaneamente, o AeroSlim ensina seu corpo a entrar em um modo contínuo de eliminação de gordura. É como se seu organismo recebesse um novo manual de instruções — e o manual diz: queime mais, armazene menos.</p>
+        </div>
+      </div>
+      <!-- Repetir estrutura para os outros 5 benefícios com seus respectivos GIFs -->
+    </section>
+
+    <section class="bonus">
+      <h2>Seus presentes exclusivos</h2>
+      <p>Após garantir o seu AeroSlim</p>
+      <div class="bonus-card">
+        <img src="bonus1.gif" />
+        <h3>Do Flácido ao Definido</h3>
+        <p>Aprenda segredos para transformar sua pele, deixá-la firme e livre de celulite...</p>
+      </div>
+      <div class="bonus-card">
+        <img src="bonus2.gif" />
+        <h3>Delícias Decadentes</h3>
+        <p>Receitas irresistíveis que satisfazem sem culpa. Sim, você pode ter o melhor dos dois mundos!</p>
+      </div>
+    </section>
+
+    <section class="carrossel-img">
+      <h2>Veja mais de perto essa transformação</h2>
+      <div class="img-scroll">
+        <img src="img1.jpg" />
+        <img src="img2.jpg" />
+        <img src="img3.jpg" />
+        <img src="img4.jpg" />
+      </div>
+    </section>
+
+    <section id="cta-final" class="cta-final">
+      <img src="produto.png" class="produto" />
+      <div class="form-cta">
+        <h2>Garanta seu AeroSlim com bônus exclusivos</h2>
+        <form action="https://link-do-produto.com">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu email" required />
+          <button type="submit">Quero meu AeroSlim</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ShapeBolt. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+  </html>
+  
