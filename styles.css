@@ -1,389 +1,104 @@
-/* Basic reset for consistency */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+/* ===== FONTE BASE E RESET ===== */
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    line-height: 1.6;
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 
-/* Header */
-header {
-    background: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
 
-header img {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto;
-}
+body { background-color: #f9f9f9; color: #222; line-height: 1.6; }
 
-/* Hero Section */
-.hero {
-    background: #5aab48;
-    padding: 50px 20px;
-}
+img { max-width: 100%; display: block; }
 
-.hero h1 {
-    font-size: 2.5rem;
-    font-family: "Arial Black", Arial, sans-serif;
-    color: #ffffff;
-    text-align: center;
-    font-weight: 900;
-}
+/* ===== CABEÇALHO ===== */ header { background-color: #ffffff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); position: sticky; top: 0; z-index: 1000; }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    text-align: center;
-    color: #ffffff;
-}
+header .logo { height: 48px; }
 
-/* Main Content */
-.content {
-    padding: 40px 20px;
-    max-width: 800px;
-    width: 95%;
-    margin: 0 auto;
-}
+header nav a { color: #1e1e1e; margin-left: 1.5rem; text-decoration: none; font-weight: 600; transition: color 0.3s; }
 
-.section {
-    background: #fff;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Mantém largura máxima */
-    width: 96%; /* Garante que ocupe mais espaço na tela */
-}
+header nav a:hover { color: #ff6b6b; }
 
-.section h2 {
-    font-size: 2rem;
-    font-family: "Arial Black", Arial, sans-serif;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-    font-weight: 900;
-}
+/* ===== HERO SECTION ===== */ .hero { background-color: #fefefe; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 4rem 2rem; gap: 2rem; }
 
-.section img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
+.hero-text { flex: 1; min-width: 300px; }
 
-.section p {
-    text-align: left;
-    hyphens: auto;
-    line-height: 1.8;
-    word-spacing: 0px;
-    letter-spacing: 0px;
-    margin-bottom: 20px;
-}
+.hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; }
 
-/* Button */
-button {
-    background: #5aab48;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px auto;
-    display: block;
-    margin: 0 auto;
-    font-weight: 900;
-}
+.hero-text p { font-size: 1.2rem; margin-bottom: 1.5rem; max-width: 500px; }
 
-button:hover {
-    background: #5aab48;
-}
+.hero-text button { padding: 1rem 2rem; background-color: #ff6b6b; color: #fff; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease; }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.hero-text button:hover { background-color: #ff4747; }
 
-/* Modals - Mantém no centro */
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
+.hero-image { flex: 1; text-align: center; }
 
-.modal-content {
-    background: white;
-    padding: 30px;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    text-align: left;
-    text-align: left;
-    max-height: 80vh;
-    overflow-y: auto;
-}
+/* ===== SEÇÃO DE VÍDEOS ===== */ .testemunhos { padding: 4rem 2rem; background-color: #fafafa; text-align: center; }
 
-.modal-content h2 {
-   text-align: center;
-   font-family: "Arial Black", Arial, sans-serif;
-}
+.testemunhos h2 { font-size: 2rem; margin-bottom: 2rem; }
 
-.close {
-    float: right;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+.carrossel-videos { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1rem; justify-content: center; padding-bottom: 1rem; }
 
-.contact-section a {
-    text-align: center;
-    text-color: #5aab48;
-}
+.carrossel-videos video { width: 300px; border-radius: 12px; }
 
-.contact-section a:hover {
-    color: #5aab48;
-    text-decoration: underline;
-    text-color: #5aab48;
-}
+.localizacoes { display: flex; justify-content: center; gap: 2rem; font-size: 0.9rem; color: #666; margin-top: 1rem; }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    padding: 30px;
-    margin-top: 30px;
-    text-align: center;
-}
+/* ===== BENEFÍCIOS ===== */ .beneficios { padding: 4rem 2rem; background-color: #ffffff; }
 
-footer a {
-    color: #ffffff;
-    margin: 0 10px;
-    text-decoration: underline;
-    text-color: #ffffff;
-}
+.beneficios h2 { text-align: center; font-size: 2rem; margin-bottom: 2.5rem; }
 
-footer a:hover {
-    color: #5aab48;
-    text-decoration: underline;
-    text-color: #5aab48;
-}
+.beneficio { display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; margin-bottom: 2.5rem; align-items: center; }
 
-/* Offer Button */
-.offer-button {
-    display: inline-block;
-    background-color: #5aab48;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
+.beneficio img { border-radius: 12px; }
 
-.offer-button:hover {
-    background-color: #5aab48;
-}
+.beneficio h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #222; }
 
-/* Offer Container */
-.offer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Isso centraliza verticalmente */
-}
+.beneficio p { color: #444; }
 
-/* Return Modal */
-#returnModal1 {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 400px;
-    background: white;
-    padding: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    text-align: center;
-}
+/* ===== BÔNUS ===== */ .bonus { padding: 4rem 2rem; background-color: #f7f7f7; }
 
-/* Botões dentro do modal */
-#returnModal1 button {
-    background: #5aab48; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-    
-#returnModal1 button:hover {
-    background: #5aab48; /* Azul mais escuro no hover */
-}
+.bonus h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
 
-/* Títulos e textos */
-#returnModal1 h2 {
-    color: #5aab48; /* Azul para títulos */
-    font-family: "Arial Black", Arial, sans-serif;
-    margin-bottom: 15px;
-}
+.bonus-card { margin: 2rem 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 16px; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
 
-#returnModal1 p {
-    color: #333; /* Cor padrão para textos */
-    line-height: 1.6;
-}
+.bonus-card img { width: 100%; border-radius: 12px; margin-bottom: 1rem; }
 
-/* Responsividade para Celulares */
-@media (max-width: 768px) {
-    .hero {
-        padding: 30px 15px;
-    }
+/* ===== CTA FINAL ===== */ .cta-final { padding: 4rem 2rem; background-color: #fff9f9; display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; text-align: center; }
 
-    .hero h1 {
-        font-size: 2rem;
-    }
+.produto { width: 300px; max-width: 100%; border-radius: 16px; }
 
-    .hero p {
-        font-size: 1rem;
-    }
+.form-cta { max-width: 400px; width: 100%; }
 
-    .content {
-        padding: 23px;
-        width: 100%;
-    }
+.form-cta h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
 
-    .section {
-        padding: 15px;
-        width: 100%;
-    }
+.form-cta input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 10px; font-size: 1rem; }
 
-    .section h2 {
-        font-size: 1.5rem;
-    }
+.form-cta button { width: 100%; padding: 1rem; background-color: #ff6b6b; color: #fff; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s; }
 
-    .section p {
-        font-size: 0.9rem;
-    }
+.form-cta button:hover { background-color: #e14f4f; }
 
-    .modal-content {
-        width: 95%;
-        padding: 30px;
-    }
+/* ===== CARROSSEL DE IMAGENS ===== */ .carrossel-img { padding: 4rem 2rem; background-color: #f5f5f5; text-align: center; }
 
-    .offer-button {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-    
-/* Estilização do Cronômetro */
-.timer {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #5aab48;
-    background: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    
-    /* Posicionamento no canto superior direito */
-    position: absolute;
-    top: 10px;
-    right: 15px;
-}
+.img-scroll { display: flex; overflow-x: auto; gap: 0; scroll-behavior: smooth; }
 
-/* Ajustes dentro do modal */
-.modal-content {
-    background: white;
-    width: 95%;
-    max-width: 400px;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: left;
-    line-height: 1.6;
-    position: relative; /* Para que o cronômetro se posicione em relação a ele */
-}
+.img-scroll img { height: 250px; flex: 0 0 auto; border-radius: 10px; margin-right: 5px; transition: transform 0.3s; }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .timer {
-        font-size: 1.5rem;
-        top: 5px;
-        right: 10px;
-        padding: 8px 12px;
-    }
-}
+.img-scroll img:hover { transform: scale(1.03); }
 
-.video-section {
-       margin: 20px 0;
-   }
+/* ===== RODAPÉ ===== */ footer { background-color: #1a1a1a; color: #fff; padding: 3rem 1rem; text-align: center; }
 
-   .video-container {
-       text-align: center;
-       max-width: 800px;
-       margin: 0 auto;
-   }
+footer h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
 
-   .video-container video {
-       width: 100%;
-       height: auto;
-   }
+footer a { color: #bbb; margin: 0 1rem; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
 
-   .video-caption {
-       margin-top: 0;
-       background-color: #5aab48;
-       color: white;
-       padding: 10px;
-       border-radius: 0;
-       font-size: 16px;
-   }
+footer a:hover { color: #fff; }
 
-/* ===== CORREÇÃO PARA O LINK DE E-MAIL ===== */
-/* Aplica a todos os links de e-mail dentro da seção de contato */
-#contact a[href^="mailto:"] {
-    color: #1943DA !important;         /* Verde principal */
-    text-decoration: underline;
-    transition: color 0.2s ease !important; /* Transição suave */
-}
+footer p { margin-top: 1rem; color: #888; font-size: 0.85rem; }
 
-/* Estados interativos */
-#contact a[href^="mailto:"]:hover,
-#contact a[href^="mailto:"]:focus,
-#contact a[href^="mailto:"]:active,
-#contact a[href^="mailto:"]:visited {
-    color: #5aab48 !important;         /* Verde mais escuro */
-    text-decoration: underline !important;
-    outline: none !important;          /* Remove contorno em alguns navegadores */
-}
+/* ===== RESPONSIVO ===== */ @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; }
 
-/* Remove efeitos de foco em navegadores como Firefox */
-#contact a[href^="mailto:"]::-moz-focus-inner {
-    border: 0 !important;
-    }
+.beneficio { grid-template-columns: 1fr; text-align: center; }
+
+.carrossel-videos { flex-direction: column; align-items: center; }
+
+.localizacoes { flex-direction: column; }
+
+.cta-final { flex-direction: column; } }
+
+                                                
