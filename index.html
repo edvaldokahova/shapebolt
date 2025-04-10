@@ -9,13 +9,22 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   
      <header>
-      <img src="logo.png" alt="ShapeBolt Logo" class="logo" />
-      <nav>
-        <a href="#about">About Us</a>
-        <a href="#quiz">Quiz</a>
-        <a href="#products">Outros Produtos</a>
-        <a href="https://plataforma-telemedicina.com" target="_blank">Consulta Médica</a>
-      </nav>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="ShapeBolt" />
+    </div>
+
+    <!-- Botão do menu hamburguer para celular -->
+    <button class="menu-toggle">☰</button>
+
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
+      <a href="#about">About Us</a>
+      <a href="#produtos">Outros Produtos</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#consulta" class="consulta-link">Consulta Médica</a>
+    </nav>
+  </div>
      </header>
   
     <!-- Primary Meta Tags -->
@@ -259,6 +268,15 @@
     <p style="font-size: 0.9rem; color: #777;">© 2025 ShapeLife. Todos os direitos reservados.</p>
   </div>
     </footer>
+
+   <script>
+   const menuToggle = document.querySelector('.menu-toggle');
+   const navMenu = document.querySelector('.nav-menu');
+
+   menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+   });
+   </script>
   </body>
   </html>
   
