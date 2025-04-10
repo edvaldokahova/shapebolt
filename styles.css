@@ -101,4 +101,27 @@ footer p { margin-top: 1rem; color: #888; font-size: 0.85rem; }
 
 .cta-final { flex-direction: column; } }
 
-                                                
+.beneficio {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.icone-beneficio {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.texto-beneficio h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.texto-beneficio p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}                                                
