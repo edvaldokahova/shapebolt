@@ -1,282 +1,130 @@
-<!DOCTYPE html>
-<html lang="pt">
- <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AeroSlim</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  
-     <header>
-  <div class="container">
-    <div class="logo">
-      <img src="logo.png" alt="ShapeBolt" />
-    </div>
-
-    <!-- Botão do menu hamburguer para celular -->
-    <button class="menu-toggle">☰</button>
-
-    <!-- Menu de navegação -->
-    <nav class="nav-menu">
-      <a href="#about">About Us</a>
-      <a href="#produtos">Outros Produtos</a>
-      <a href="#quiz">Quiz</a>
-      <a href="#consulta" class="consulta-link">Consulta Médica</a>
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz AeroSlim personalizado - Shapebolt™">
+  <meta name="keywords" content="AeroSlim, quiz, emagrecimento, metabolismo, suplemento">
+  <meta name="author" content="Shapebolt™">
+  <title>Quiz AeroSlim - Shapebolt™</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">Shapebolt™</div>
+    <nav>
+      <a href="about.html">About Us</a>
+      <a href="produtos.html">Mais Produtos</a>
     </nav>
+  </header>  <!-- Imagem destaque inicial -->  <section class="imagem-destaque">
+    <img src="img/inicio.jpg" alt="Destaque AeroSlim">
+  </section>  <!-- Quiz -->  <main>
+    <form id="quiz-form">
+      <div class="quiz-step">
+        <img src="img/altura.jpg" alt="Altura">
+        <label>Qual é a sua altura?</label>
+        <input type="number" name="altura" step="0.01" placeholder="(ex: 1.65)" required>
+      </div><div class="quiz-step">
+    <img src="img/peso.jpg" alt="Peso">
+    <label>Qual é o seu peso?</label>
+    <input type="number" name="peso" step="0.1" placeholder="(ex: 68)" required>
   </div>
-     </header>
-  
-    <!-- Primary Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How to dry the belly in 30 days without starving and exercising only 1 hour a day! Your journey starts now.">
-    <meta name="keywords" content="fitness, aeroslim, transformation, ShapeBolt, weight loss, exclusive method">
-    <meta name="author" content="ShapeBolt™">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <meta name="title" content="ShapeBolt™ - The Secret of Instant Transformation" />
-    <link rel="stylesheet" href="styles.css">
 
-    <!-- Meta Pixel Code (CORRETO) -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1193795632404769');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" 
-         src="https://www.facebook.com/tr?id=1193795632404769&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-    
-  <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shapebolt.store/" />
-    <meta property="og:title" content="ShapeBolt™ - The Secret of Instant Transformation" />
-    <meta property="og:description" content="How to dry the belly in 30 days without starving and exercising only 1 hour a day! Your journey starts now." />
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
- </head>
- <body>
- 
-  <section class="hero">
-      <div class="hero-text">
-        <img src="logo.png" alt="Logo pequeno" class="logo-mini" />
-        <h1>Transforme seu corpo com AeroSlim</h1>
-        <p>O suplemento que redefine sua jornada de emagrecimento.</p>
-        <button onclick="document.getElementById('cta-final').scrollIntoView({ behavior: 'smooth' })">Garantir o meu</button>
-      </div>
-      <div class="hero-image">
-        <img src="hero-face.png" alt="Pessoa feliz" />
-      </div>
-    </section>
+  <div class="quiz-step">
+    <img src="img/dieta.jpg" alt="Dieta">
+    <label>Qual o seu tipo de dieta atualmente?</label>
+    <select name="dieta" required>
+      <option value="nenhuma">Não sigo nenhuma</option>
+      <option value="lowcarb">Low Carb</option>
+      <option value="jejum">Jejum Intermitente</option>
+      <option value="outra">Outra</option>
+    </select>
+  </div>
 
-    <section class="testemunhos">
-      <h2>O que dizem sobre o AeroSlim</h2>
-      <div class="carrossel-videos">
-        <video controls poster="poster1.jpg">
-          <source src="video1.mp4" type="video/mp4" />
-        </video>
-        <video controls poster="poster2.jpg">
-          <source src="video2.mp4" type="video/mp4" />
-        </video>
-        <video controls poster="poster3.jpg">
-          <source src="video3.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="localizacoes">
-        <p><i class="fas fa-map-marker-alt"></i> Flórida</p>
-        <p><i class="fas fa-map-marker-alt"></i> Flórida</p>
-        <p><i class="fas fa-map-marker-alt"></i> Carolina do Sul</p>
-      </div>
-    </section>
-
-    <section class="beneficios">
-      <h2>Descubra por que o AeroSlim está virando febre</h2>
-      <div class="beneficio">
-        <img src="benef1.gif" />
-         <img src="img/icone-beneficio1.png" alt="Ícone 1" class="icone-beneficio">
-        <div>
-          <h3>Reduz o inchaço em questão de dias — não semanas</h3>
-          <p>Você já sentiu que está sempre “estufado”? AeroSlim combate a retenção de líquidos com ingredientes que limpam e desincham o seu corpo naturalmente, fazendo você se sentir mais leve logo nas primeiras cápsulas. Você notará a diferença sem precisar esperar semanas, relaxa e tome.</p>
-        </div>
-        <img src="benef2.gif" />
-        <div>
-          <h3>Tira você da estagnação metabólica</h3>
-          <p>Se você já fez dieta, treinou e mesmo assim não emagreceu, seu metabolismo pode estar travado. O AeroSlim foi desenvolvido para destravar essa engrenagem oculta e acelerar o processo de queima — sem exigir mudanças radicais no seu estilo de vida.</p>
-        </div>
-        <img src="benef3.gif" />
-        <div>
-          <h3>Efeito “reprogramação”: seu corpo aprende a queimar gordura por conta própria</h3>
-          <p>Ao invés de apenas queimar calorias momentaneamente, o AeroSlim ensina seu corpo a entrar em um modo contínuo de eliminação de gordura. É como se seu organismo recebesse um novo manual de instruções — e o manual diz: queime mais, armazene menos.</p>
-        </div>
-        <img src="benef4.gif" />
-        <div>
-          <h3>Devolve o controle do seu apetite — sem luta interna</h3>
-          <p>Sabe aquela sensação de “preciso comer mais” mesmo sem fome? Isso é falta de controle hormonal. AeroSlim atua diretamente nesses gatilhos, reduzindo a compulsão alimentar e ajudando você a se sentir saciado(a) com menos.</p>
-        </div>
-        <img src="benef5.gif" />
-        <div>
-          <h3>Estímulo natural de energia e foco — sem efeitos colaterais</h3>
-          <p>Com AeroSlim, você sente mais disposição para viver. Desde levantar da cama até ter ânimo para treinar, caminhar ou simplesmente aproveitar o dia. Sem palpitações. Sem quedas de energia. Apenas energia limpa.</p>
-        </div>
-        <img src="benef5.gif" />
-        <div>
-          <h3>Resultados visíveis que reforçam sua autoestima todos os dias</h3>
-          <p>Você começa a ver diferença na barriga, nas roupas, no rosto. E o melhor: essas mudanças renovam sua confiança, sua motivação e a crença de que sim, é possível transformar seu corpo.</p>
-        </div>
-      </div>
-      <!-- Repetir estrutura para os outros 5 benefícios com seus respectivos GIFs -->
-    </section>
-
-    <section class="bonus">
-      <h2>Seus presentes exclusivos</h2>
-      <p>Após garantir o seu AeroSlim</p>
-      <div class="bonus-card">
-        <img src="bonus1.gif" />
-        <h3>Do Flácido ao Definido</h3>
-        <p>Aprenda segredos para transformar sua pele, deixá-la Firme, Tonificada e Livre de Celulite para Sempre.</p>
-      </div>
-
-     <!-- PRIMEIRO PRESENTE -->
-    <div class="bonus-item" style="margin-top: 50px;">
-      <img src="img/capa-ebook-pele.jpg" alt="eBook Pele Firme" style="max-width: 200px; display:block; margin: 0 auto; border-radius: 12px;">
-      <p style="text-align:center; font-size: 1.2rem; color: #888; margin: 10px 0;">
-        <img src="img/icon-preco.png" alt="Ícone Preço" style="width:18px;"> 
-        <del>$54</del>
-      </p>
-      <p style="text-align:center; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Este guia exclusivo revela segredos para transformar sua pele, deixando-a firme e tonificada. Você descobrirá:</p>
-
-      <div class="bonus-details" style="margin-top:30px;">
-        <!-- ALIMENTO -->
-        <div style="margin-bottom: 40px;">
-          <img src="img/gif-alimentos.gif" alt="Alimentos Saudáveis" style="max-width: 100%; border-radius: 16px;">
-          <h3>3 Alimentos Deliciosos que Sua Pele Vai Amar</h3>
-          <p>Incorpore facilmente esses superalimentos à sua dieta e observe sua pele ganhar elasticidade e brilho natural. São alimentos acessíveis e simples, que trazem grandes benefícios visíveis em poucas semanas.</p>
-        </div>
-
-        <!-- TUMMY TUCK -->
-        <div style="margin-bottom: 40px;">
-          <img src="img/gif-tummy-tuck.gif" alt="Tummy Tuck Caseiro" style="max-width: 100%; border-radius: 16px;">
-          <h3>Técnica de "Tummy Tuck" em Casa</h3>
-          <p>Com apenas 1 minuto por dia, aprenda um método eficaz para fortalecer e tonificar a região abdominal, sem necessidade de equipamentos caros ou procedimentos invasivos. Fácil de aplicar e com resultado notável em poucos dias.</p>
-        </div>
-
-        <!-- ESFOLIANTE -->
-        <div>
-          <img src="img/gif-esfoliante-cafe.gif" alt="Esfoliante de Café" style="max-width: 100%; border-radius: 16px;">
-          <h3>Esfoliante de Café Anti-Celulite</h3>
-          <p>Descubra como utilizar um simples esfoliante caseiro para reduzir a aparência da celulite, deixando sua pele suave e uniforme. É um truque natural poderoso que ativa a circulação e melhora visivelmente o aspecto da pele.</p>
-        </div>
-      </div>
-
-      <p style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:30px;">
-        Este eBook é seu aliado perfeito para complementar os efeitos do AeroSlim, ajudando você a alcançar uma aparência mais jovem e saudável.
-      </p>
-    </div>
-    </div>
+  <div class="quiz-step">
+    <img src="img/exercícios.jpg" alt="Exercícios">
+    <label>Com que frequência você pratica atividades físicas?</label>
+    <select name="exercícios" required>
+      <option value="1-2">1 a 2 vezes por semana</option>
+      <option value="3-4">3 a 4 vezes por semana</option>
+      <option value="constantemente">Todos os dias</option>
+      <option value="regular">Pratico apenas caminhadas leves ou alongamentos</option>
+    </select>
+  </div>
      
-     <div class="bonus-card">
-        <img src="bonus2.gif" />
-        <h3>Delícias Decadentes</h3>
-        <p>Receitas irresistíveis que satisfazem sem culpa. Sim, você pode ter o melhor dos dois mundos!</p>
-      </div>
-
-     <!-- SEGUNDO PRESENTE -->
-<div class="bonus-item" style="margin-top: 60px;">
-  <img src="img/capa-ebook-sobremesas.jpg" alt="eBook Sobremesas" style="max-width: 200px; display:block; margin: 0 auto; border-radius: 12px;">
-  <p style="text-align:center; font-size: 1.2rem; color: #888; margin: 10px 0;">
-    <img src="img/icon-preco.png" alt="Ícone Preço" style="width:18px;"> 
-    <del>$54</del>
-  </p>
-  <p style="text-align:center; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Quem disse que é preciso abrir mão das sobremesas para manter a forma? Neste ebook, você terá acesso a receitas insanas, como:</p>
-    
-    <div class="bonus-details" style="margin-top:30px;">
-    <!-- MORANGOS -->
-    <div style="margin-bottom: 40px;">
-      <img src="img/gif-morango-chocolate.gif" alt="Morangos com Chocolate" style="max-width: 100%; border-radius: 16px;">
-      <h3>Morangos Beijados pelo Chocolate Aveludado</h3>
-      <p>Uma combinação clássica e sofisticada que satisfaz o paladar sem comprometer sua dieta. Ideal para momentos especiais ou aquela vontade súbita de doce. Saudável, simples e incrivelmente prazerosa.</p>
-    </div>
-
-    <!-- CHEESECAKE -->
-    <div style="margin-bottom: 40px;">
-      <img src="img/gif-cheesecake-framboesa.gif" alt="Cheesecake Framboesa" style="max-width: 100%; border-radius: 16px;">
-      <h3>Cheesecake Explosão de Framboesa</h3>
-      <p>Uma sobremesa cremosa e frutada que é ao mesmo tempo indulgente e amiga da sua cintura. Com poucos ingredientes, você prepara uma delícia digna de confeitaria — sem culpa e sem exageros.</p>
-    </div>
-
-    <!-- CRUMBLE -->
-    <div style="margin-bottom: 40px;">
-      <img src="img/gif-crumble-maca.gif" alt="Crumble de Maçã" style="max-width: 100%; border-radius: 16px;">
-      <h3>Crumble Mágico de Maçã e Sabugueiro Dourado</h3>
-      <p>Uma opção reconfortante e nutritiva para os dias em que você deseja algo doce. A mistura da maçã com o toque exótico do sabugueiro cria uma explosão de sabor com baixa caloria e alto valor nutricional.</p>
-    </div>
-
-    <!-- COOKIES -->
-    <div>
-      <img src="img/gif-cookies-groselha.gif" alt="Cookies de Groselha Negra" style="max-width: 100%; border-radius: 16px;">
-      <h3>Cookies de Impressão Digital com Delícia de Groselha Negra</h3>
-      <p>Pequenos prazeres que combinam sabor e saúde em cada mordida. Com ingredientes naturais e equilibrados, você tem um doce funcional que respeita seus objetivos sem abrir mão do sabor.</p>
-    </div>
+     
+  <div class="quiz-step">
+    <img src="img/rotina.jpg" alt="Rotina">
+    <label>Como é sua rotina diária?</label>
+    <select name="rotina" required>
+      <option value="sedentaria">Sedentária</option>
+      <option value="moderada">Moderada</option>
+      <option value="ativa">Ativa</option>
+    </select>
   </div>
-</div>
-    </section>
 
-    <section class="carrossel-img">
-      <h2>Veja mais de perto essa transformação</h2>
-      <div class="img-scroll">
-        <img src="img1.jpg" />
-        <img src="img2.jpg" />
-        <img src="img3.jpg" />
-        <img src="img4.jpg" />
-      </div>
-    </section>
-
-    <section id="cta-final" class="cta-final">
-      <img src="produto.png" class="produto" />
-      <div class="form-cta">
-        <h2>Garanta seu AeroSlim com bônus exclusivos</h2>
-        <form action="https://link-do-produto.com">
-          <input type="text" placeholder="Seu nome" required />
-          <input type="email" placeholder="Seu email" required />
-          <button type="submit">Quero meu AeroSlim</button>
-        </form>
-      </div>
-    </section>
-
-    <footer style="background-color: #1a1a1a; color: #fff; padding: 40px 20px; text-align: center;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="font-size: 1.5rem; margin-bottom: 20px;">ShapeLife</h2>
-    
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
-      <a href="#" style="color: #bbb; text-decoration: none;">Sobre nós</a>
-      <a href="#" style="color: #bbb; text-decoration: none;">Política de Privacidade</a>
-      <a href="#" style="color: #bbb; text-decoration: none;">Termos de Uso</a>
-      <a href="#" style="color: #bbb; text-decoration: none;">Política de Cookies</a>
-    </div>
-
-    <p style="font-size: 0.9rem; color: #777;">© 2025 ShapeLife. Todos os direitos reservados.</p>
+  <div class="quiz-step">
+    <img src="img/problemas.jpg" alt="Problemas">
+    <label>Qual problema você mais enfrenta?</label>
+    <select name="problema" required>
+      <option value="cansaco">Cansaço</option>
+      <option value="metabolismo">Metabolismo lento</option>
+      <option value="gordura">Gordura localizada</option>
+      <option value="tudo">Um pouco de tudo</option>
+    </select>
   </div>
-    </footer>
 
-   <script>
-   const menuToggle = document.querySelector('.menu-toggle');
-   const navMenu = document.querySelector('.nav-menu');
+  <div class="quiz-step">
+    <img src="img/objetivo.jpg" alt="Objetivo">
+    <label>Qual é o seu principal objetivo com o AeroSlim?</label>
+    <select name="objetivo" required>
+      <option value="emagrecer">Emagrecer</option>
+      <option value="maisenergia">Mais energia</option>
+      <option value="equilibrar">Equilibrar metabolismo</option>
+    </select>
+  </div>
 
-   menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-   });
-   </script>
-  </body>
-  </html>
-  
+  <button type="submit">Ver meu resultado</button>
+</form>
+
+  </main>  <!-- Modal resultado -->  <div id="result-modal" class="modal">
+    <div class="modal-content" id="modal-content">
+      <!-- Conteúdo gerado via JS -->
+    </div>
+  </div>  <!-- Cookie Policy aviso -->  <div id="cookie-notice" class="cookie-notice">
+    <p>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica.html">política de privacidade</a> e <a href="termos.html">termos de uso</a>. Seus dados estão seguros.</p>
+    <button onclick="document.getElementById('cookie-notice').style.display='none'">Aceitar</button>
+  </div>  <!-- Rodapé -->  <footer>
+    <p>&copy; 2025 Shapebolt™. Todos os direitos reservados.</p>
+  </footer>  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const altura = parseFloat(document.querySelector('[name="altura"]').value);
+      const peso = parseFloat(document.querySelector('[name="peso"]').value);
+      const dieta = document.querySelector('[name="dieta"]').value;
+      const rotina = document.querySelector('[name="rotina"]').value;
+      const problema = document.querySelector('[name="problema"]').value;
+      const objetivo = document.querySelector('[name="objetivo"]').value;
+
+      const imc = (peso / (altura * altura)).toFixed(1);
+      let imcClassificacao = '';
+      if (imc < 18.5) imcClassificacao = 'abaixo do peso';
+      else if (imc < 24.9) imcClassificacao = 'peso ideal';
+      else if (imc < 29.9) imcClassificacao = 'sobrepeso';
+      else imcClassificacao = 'obesidade';
+
+      let recomendacao = `Seu IMC é <strong>${imc}</strong> (${imcClassificacao}). `;
+      recomendacao += `<p>Com base nas suas respostas, identificamos que o <strong>AeroSlim</strong> pode te ajudar com `;
+      recomendacao += problema === 'tudo' ? 'todos os desafios mencionados' : `o problema de <strong>${problema}</strong>`;
+      recomendacao += ` e alcançar seu objetivo de <strong>${objetivo}</strong>.</p>`;
+
+      recomendacao += `<p><em>Atenção:</em> Embora o AeroSlim seja 100% seguro para a maioria das pessoas, se você estiver <strong>amamentando, grávida, ou tiver alguma condição médica específica</strong>, <a href='https://www.plataformamedicaexemplo.com' target='_blank'>consulte sempre um profissional de saúde</a>.</p>`;
+
+      recomendacao += `<a href='https://linkparacompraaqui.com' target='_blank'><button id='cta-button'>Garantir meu AeroSlim</button></a>`;
+
+      document.getElementById('modal-content').innerHTML = recomendacao;
+      document.getElementById('result-modal').style.display = 'block';
+    });
+  </script></body>
+</html>
