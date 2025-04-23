@@ -1,41 +1,126 @@
-/* styles.css */
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-:root { --primary: #4CAF50; --secondary: #333; --background: #fff; --font: 'Segoe UI', sans-serif; --shadow: rgba(0, 0, 0, 0.1); }
+html {
+  scroll-behavior: smooth;
+}
 
-{ box-sizing: border-box; margin: 0; padding: 0; }
+/* Font and Backgrounds */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
 
+/* Dark Mode (Auto detect via user OS) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #ddd;
+  }
+  header {
+    background: #1e1e1e;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+  }
+  main {
+    background: #1c1c1c;
+    box-shadow: 0 0 10px rgba(255,255,255,0.03);
+  }
+  footer {
+    background: #000;
+  }
+  header nav a {
+    color: #ccc;
+  }
+  header nav a:hover {
+    color: #fff;
+  }
+}
 
-body { font-family: var(--font); background-color: var(--background); color: var(--secondary); padding: 0 1rem; }
+/* Header */
+header {
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
 
-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background-color: var(--primary); color: #fff; font-weight: bold; }
+header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
 
-header .logo { font-size: 1.5rem; }
+header nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
 
-header nav a { margin-left: 1rem; text-decoration: none; color: #fff; }
+header nav a:hover {
+  color: #000;
+}
 
-main { max-width: 600px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px var(--shadow); padding: 2rem; }
+/* Main */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  margin-top: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
 
-.quiz-step { margin-bottom: 2rem; }
+/* Headings */
+h1 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
 
-.quiz-step img { width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
+h2, h3 {
+  margin-top: 1.5rem;
+  color: #222;
+}
 
-label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
 
-input, select, button { width: 100%; padding: 0.8rem; margin-top: 0.3rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; }
-
-button[type="submit"], #cta-button { background-color: var(--primary); color: white; border: none; margin-top: 1.5rem; transition: background 0.3s ease; }
-
-button:hover { background-color: #388e3c; cursor: pointer; }
-
-footer { text-align: center; margin-top: 4rem; padding: 2rem 0; background: #f9f9f9; font-size: 0.9rem; }
-
-.modal { display: none; position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; background: rgba(0, 0, 0, 0.6); justify-content: center; align-items: center; z-index: 999; }
-
-.modal-content { background: white; padding: 2rem; max-width: 500px; width: 90%; border-radius: 10px; box-shadow: 0 8px 16px var(--shadow); text-align: center; }
-
-.cookie-notice { position: fixed; bottom: 0; left: 0; right: 0; background: #eee; padding: 1rem; text-align: center; font-size: 0.9rem; z-index: 1000; }
-
-.cookie-notice p a { color: var(--primary); text-decoration: underline; }
-
-@media (max-width: 600px) { header { flex-direction: column; align-items: flex-start; } header nav a { margin: 0.5rem 0 0; } main { padding: 1.5rem 1rem; } .modal-content { padding: 1.5rem; } }
-
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav {
+    margin-top: 0.5rem;
+  }
+  main {
+    padding: 1.2rem;
+    margin: 1rem;
+  }
+}
