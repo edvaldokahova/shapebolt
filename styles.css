@@ -70,11 +70,12 @@ header .logo {
 }
 
 .menu-toggle .bar {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background-color: white;
-  margin: 4px 0;
+  margin: 5px 0;
   transition: 0.4s;
+  border-radius: 2px;
 }
 
 /* Animação para virar X */
@@ -148,7 +149,7 @@ header .logo {
 .hero-img {
   max-width: 100%;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .intro-text {
@@ -205,13 +206,10 @@ header .logo {
   text-align: center;
 }
 
-..quiz-step img {
-  width: 100%;
-  max-width: 500px; /* ou aumente para 600px se quiser mais */
-  height: auto;
-  border-radius: 12px;
+.quiz-step img {
+  width: 200px;
   margin-bottom: 1rem;
-  transition: transform 0.3s ease;
+  border-radius: 50%;
 }
 
 .quiz-step img:hover {
