@@ -123,10 +123,16 @@
   </div>
 
   <!-- Cookie Notice -->
-  <div id="cookie-notice" class="cookie-notice">
-    <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms of Use</a>. Your data is safe with us.</p>
-    <button onclick="document.getElementById('cookie-notice').style.display='none'">Accept</button>
-  </div>
+ <div class="cookie-notice" id="cookieNotice">
+   <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-and-conditions.html">Terms of Use</a>. Your data is safe with us.</p>
+  <button onclick="document.getElementById('cookieNotice').style.display='none'">Ok</button>
+ </div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById('cookieNotice').style.display = 'flex';
+  }, 5000);
+</script>
 
   <!-- Footer -->
   <footer>
