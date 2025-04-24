@@ -1,121 +1,134 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Quiz AeroSlim personalizado - Shapebolt™">
-  <meta name="keywords" content="AeroSlim, quiz, emagrecimento, metabolismo, suplemento">
+  <meta name="description" content="Personalized AeroSlim Quiz - Shapebolt™">
+  <meta name="keywords" content="AeroSlim, quiz, weight loss, metabolism, supplement">
   <meta name="author" content="Shapebolt™">
-  <title>Quiz AeroSlim - Shapebolt™</title>
+  <title>AeroSlim Quiz - Shapebolt™</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Cabeçalho -->
+  <!-- Header -->
   <header>
     <div class="logo">Shapebolt™</div>
     <nav>
       <a href="about.html">About Us</a>
-      <a href="produtos.html">Mais Produtos</a>
+      <a href="produtos.html">More Products</a>
     </nav>
-  </header>  <!-- Imagem destaque inicial -->  <section class="imagem-destaque">
-    <img src="img/inicio.jpg" alt="Destaque AeroSlim">
+  </header>
+
+  <!-- Hero Section -->
+  <section class="imagem-destaque">
+    <img src="img/inicio.jpg" alt="AeroSlim Highlight">
     <section class="intro-text">
-  <h2>Welcome,</h2>
-  <p>
-    Discover your metabolic profile and the secret to a healthy and energetic body!
-  </p>
-  <p>
-    Thousands of people are unlocking a new unprecedented form of burning fat with a method based on the hidden science of metabolism. Answer some simple questions and discover your personalized path to a lighter and healthier body.
-  </p>
-  <p>
-    Roll up the sleeves and let's start. It is as simple as one-two-three
-  </p>
+      <h2>Welcome,</h2>
+      <p>
+        Discover your metabolic profile and the secret to a healthy and energetic body!
+      </p>
+      <p>
+        Thousands of people are unlocking a new unprecedented form of burning fat with a method based on the hidden science of metabolism. Answer some simple questions and discover your personalized path to a lighter and healthier body.
+      </p>
+      <p>
+        Roll up the sleeves and let's start. It is as simple as one-two-three.
+      </p>
       <div class="start-button-wrapper fade-in">
-        <a href="#quiz-section" class="start-button">Iniciar</a>
+        <a href="#quiz-section" class="start-button">Start</a>
       </div>
     </section>
 
   <section id="quiz-section">
-      <!-- Quiz -->
-<form id="quiz-form">
+    <!-- Quiz -->
+    <form id="quiz-form">
       <div class="quiz-step">
-        <img src="img/altura.jpg" alt="Altura">
-        <label>Qual é a sua altura?</label>
-        <input type="number" name="altura" step="0.01" placeholder="(ex: 1.65)" required>
-      </div><div class="quiz-step">
-    <img src="img/peso.jpg" alt="Peso">
-    <label>Qual é o seu peso?</label>
-    <input type="number" name="peso" step="0.1" placeholder="(ex: 68)" required>
-  </div>
+        <img src="img/altura.jpg" alt="Height">
+        <label>What is your height?</label>
+        <input type="number" name="altura" step="0.01" placeholder="(e.g. 1.65)" required>
+      </div>
 
-  <div class="quiz-step">
-    <img src="img/dieta.jpg" alt="Dieta">
-    <label>Qual o seu tipo de dieta atualmente?</label>
-    <select name="dieta" required>
-      <option value="nenhuma">Não sigo nenhuma</option>
-      <option value="lowcarb">Low Carb</option>
-      <option value="jejum">Jejum Intermitente</option>
-      <option value="outra">Outra</option>
-    </select>
-  </div>
+      <div class="quiz-step">
+        <img src="images/peso.jpg" alt="Weight">
+        <label>What is your weight?</label>
+        <input type="number" name="peso" step="0.1" placeholder="(e.g. 68)" required>
+      </div>
 
-  <div class="quiz-step">
-    <img src="img/exercícios.jpg" alt="Exercícios">
-    <label>Com que frequência você pratica atividades físicas?</label>
-    <select name="exercícios" required>
-      <option value="1-2">1 a 2 vezes por semana</option>
-      <option value="3-4">3 a 4 vezes por semana</option>
-      <option value="constantemente">Todos os dias</option>
-      <option value="regular">Pratico apenas caminhadas leves ou alongamentos</option>
-    </select>
-  </div>
-     
-     
-  <div class="quiz-step">
-    <img src="img/rotina.jpg" alt="Rotina">
-    <label>Como é sua rotina diária?</label>
-    <select name="rotina" required>
-      <option value="sedentaria">Sedentária</option>
-      <option value="moderada">Moderada</option>
-      <option value="ativa">Ativa</option>
-    </select>
-  </div>
+      <div class="quiz-step">
+        <img src="img/dieta.jpg" alt="Diet">
+        <label>What type of diet do you currently follow?</label>
+        <select name="dieta" required>
+          <option value="nenhuma">None</option>
+          <option value="lowcarb">Low Carb</option>
+          <option value="jejum">Intermittent Fasting</option>
+          <option value="outra">Other</option>
+        </select>
+      </div>
 
-  <div class="quiz-step">
-    <img src="img/problemas.jpg" alt="Problemas">
-    <label>Qual problema você mais enfrenta?</label>
-    <select name="problema" required>
-      <option value="cansaco">Cansaço</option>
-      <option value="metabolismo">Metabolismo lento</option>
-      <option value="gordura">Gordura localizada</option>
-      <option value="tudo">Um pouco de tudo</option>
-    </select>
-  </div>
+      <div class="quiz-step">
+        <img src="img/exercícios.jpg" alt="Exercise">
+        <label>How often do you exercise?</label>
+        <select name="exercícios" required>
+          <option value="1-2">1 to 2 times a week</option>
+          <option value="3-4">3 to 4 times a week</option>
+          <option value="constantemente">Daily</option>
+          <option value="regular">Light walking or stretching only</option>
+        </select>
+      </div>
 
-  <div class="quiz-step">
-    <img src="img/objetivo.jpg" alt="Objetivo">
-    <label>Qual é o seu principal objetivo com o AeroSlim?</label>
-    <select name="objetivo" required>
-      <option value="emagrecer">Emagrecer</option>
-      <option value="maisenergia">Mais energia</option>
-      <option value="equilibrar">Equilibrar metabolismo</option>
-    </select>
-  </div>
+      <div class="quiz-step">
+        <img src="img/rotina.jpg" alt="Routine">
+        <label>What is your daily routine like?</label>
+        <select name="rotina" required>
+          <option value="sedentaria">Sedentary</option>
+          <option value="moderada">Moderate</option>
+          <option value="ativa">Active</option>
+        </select>
+      </div>
 
-  <button type="submit">Ver meu resultado</button>
-</form>
+      <div class="quiz-step">
+        <img src="img/problemas.jpg" alt="Problems">
+        <label>What is your biggest challenge?</label>
+        <select name="problema" required>
+          <option value="cansaco">Fatigue</option>
+          <option value="metabolismo">Slow metabolism</option>
+          <option value="gordura">Localized fat</option>
+          <option value="tudo">A bit of everything</option>
+        </select>
+      </div>
+
+      <div class="quiz-step">
+        <img src="img/objetivo.jpg" alt="Goal">
+        <label>What is your main goal with AeroSlim?</label>
+        <select name="objetivo" required>
+          <option value="emagrecer">Lose weight</option>
+          <option value="maisenergia">More energy</option>
+          <option value="equilibrar">Balance metabolism</option>
+        </select>
+      </div>
+
+      <button type="submit">See my result</button>
+    </form>
   </section>
 
-  </main>  <!-- Modal resultado -->  <div id="result-modal" class="modal">
-    <div class="modal-content" id="modal-content">
-      <!-- Conteúdo gerado via JS -->
-    </div>
-  </div>  <!-- Cookie Policy aviso -->  <div id="cookie-notice" class="cookie-notice">
-    <p>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica.html">política de privacidade</a> e <a href="termos.html">termos de uso</a>. Seus dados estão seguros.</p>
-    <button onclick="document.getElementById('cookie-notice').style.display='none'">Aceitar</button>
-  </div>  <!-- Rodapé -->  <footer>
-    <p>&copy; 2025 Shapebolt™. Todos os direitos reservados.</p>
-  </footer>  <script>
+  <!-- Result Modal -->
+  <div id="result-modal" class="modal">
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <!-- Cookie Notice -->
+  <div id="cookie-notice" class="cookie-notice">
+    <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="politica.html">Privacy Policy</a> and <a href="termos.html">Terms of Use</a>. Your data is safe with us.</p>
+    <button onclick="document.getElementById('cookie-notice').style.display='none'">Accept</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shapebolt™. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
     document.getElementById('quiz-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const altura = parseFloat(document.querySelector('[name="altura"]').value);
@@ -127,22 +140,23 @@
 
       const imc = (peso / (altura * altura)).toFixed(1);
       let imcClassificacao = '';
-      if (imc < 18.5) imcClassificacao = 'abaixo do peso';
-      else if (imc < 24.9) imcClassificacao = 'peso ideal';
-      else if (imc < 29.9) imcClassificacao = 'sobrepeso';
-      else imcClassificacao = 'obesidade';
+      if (imc < 18.5) imcClassificacao = 'underweight';
+      else if (imc < 24.9) imcClassificacao = 'ideal weight';
+      else if (imc < 29.9) imcClassificacao = 'overweight';
+      else imcClassificacao = 'obese';
 
-      let recomendacao = `Seu IMC é <strong>${imc}</strong> (${imcClassificacao}). `;
-      recomendacao += `<p>Com base nas suas respostas, identificamos que o <strong>AeroSlim</strong> pode te ajudar com `;
-      recomendacao += problema === 'tudo' ? 'todos os desafios mencionados' : `o problema de <strong>${problema}</strong>`;
-      recomendacao += ` e alcançar seu objetivo de <strong>${objetivo}</strong>.</p>`;
+      let recomendacao = `Your BMI is <strong>${imc}</strong> (${imcClassificacao}). `;
+      recomendacao += `<p>Based on your answers, we identified that <strong>AeroSlim</strong> can help with `;
+      recomendacao += problema === 'tudo' ? 'all the challenges mentioned' : `the issue of <strong>${problema}</strong>`;
+      recomendacao += ` and achieving your goal of <strong>${objetivo}</strong>.</p>`;
 
-      recomendacao += `<p><em>Atenção:</em> Embora o AeroSlim seja 100% seguro para a maioria das pessoas, se você estiver <strong>amamentando, grávida, ou tiver alguma condição médica específica</strong>, <a href='https://www.healthtap.com/telehealth/' target='_blank'>consulte sempre um profissional de saúde</a>.</p>`;
+      recomendacao += `<p><em>Note:</em> While AeroSlim is 100% safe for most people, if you are <strong>breastfeeding, pregnant, or have a specific medical condition</strong>, please <a href='https://www.healthtap.com/telehealth/' target='_blank'>consult a healthcare professional</a>.</p>`;
 
-      recomendacao += `<a href='https://aeroslim24.com/text.php#aff=edvaldocahova' target='_blank'><button id='cta-button'>Garantir meu AeroSlim</button></a>`;
+      recomendacao += `<a href='https://aeroslim24.com/text.php#aff=edvaldocahova' target='_blank'><button id='cta-button'>Get My AeroSlim</button></a>`;
 
       document.getElementById('modal-content').innerHTML = recomendacao;
       document.getElementById('result-modal').style.display = 'block';
     });
-  </script></body>
-</html>
+  </script>
+</body>
+  </html>
