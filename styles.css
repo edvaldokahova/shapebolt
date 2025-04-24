@@ -244,3 +244,47 @@ footer {
   color: #10b981;
   text-decoration: underline;
 }
+
+/* Novo: botão hamburguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Menu padrão */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
