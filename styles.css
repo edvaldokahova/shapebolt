@@ -101,13 +101,16 @@ h2, h3 {
 
 /* Footer */
 footer {
-  background: #111;
-  color: #fff;
+  background: #f0f0f0;
+  color: #333;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  margin: 0;
 }
 
 /* Mobile Responsive */
@@ -230,20 +233,7 @@ footer {
   color: #333;
 }
 
-.cookie-notice {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #333;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  z-index: 3000;
-}
-.cookie-notice a {
-  color: #10b981;
-  text-decoration: underline;
-}
+
 
 /* Novo: botão hamburguer */
 .menu-toggle {
@@ -261,7 +251,64 @@ footer {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media (max-wid.cookie-notice {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #333;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  max-width: 90%;
+  width: 500px;
+  font-size: 0.95rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cookie-notice a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+.cookie-notice a:hover {
+  text-decoration: underline;
+}
+
+.cookie-notice {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.2s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cookie-notice button {
+  align-self: flex-end;
+  background: #0071e3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cookie-notice button:hover {
+  background: #005bb5;
+}th: 768px) {
   .menu-toggle {
     display: block;
   }
