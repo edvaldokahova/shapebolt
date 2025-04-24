@@ -288,3 +288,45 @@ footer {
     flex-direction: column;
   }
 }
+
+.quiz-step {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.quiz-step img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.quiz-step label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.quiz-step input,
+.quiz-step select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.quiz-step input:focus,
+.quiz-step select:focus {
+  border-color: #10b981;
+  outline: none;
+}
+
