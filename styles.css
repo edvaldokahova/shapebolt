@@ -1,175 +1,117 @@
-/* Base Reset */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Tipografia */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #121212;
-    color: #ddd;
-  }
-  header {
-    background: #1e1e1e;
-    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
-  }
-  main {
-    background: #1c1c1c;
-    box-shadow: 0 0 10px rgba(255,255,255,0.03);
-  }
-  footer {
-    background: #000;
-  }
-  header nav a {
-    color: #ccc;
-  }
-  header nav a:hover {
-    color: #fff;
-  }
 }
 
 /* Header */
 header {
-  background: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
-header .logo {
+.logo {
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  color: #1a1a1a;
-}
-
-header nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #555;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-header nav a:hover {
-  color: #000;
 }
 
 .menu-toggle {
-  display: none;
   font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: #333;
-  margin-left: auto;
-}
-
-/* Main */
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
-  border-top: 1px solid #ddd;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  header {
-    flex-direction: row;
-    align-items: center;
-  }
-  header nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #fff;
-    padding: 1rem 0;
-  }
-  header nav.active {
-    display: flex;
-  }
-  header nav a {
-    margin: 0.5rem 1rem;
-  }
+  position: absolute;
+  left: 20px;
+  top: 1.2rem;
 }
 
 .nav-links {
+  display: none;
+  gap: 1rem;
+}
+
+.nav-links.active {
   display: flex;
-  gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #fff;
-    margin-top: 1rem;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links a {
-    padding: 0.75rem 1rem;
-    border-top: 1px solid #eee;
-  }
+/* Hero Section */
+.imagem-destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
 }
 
-/* Hero Image */
 .hero-img {
-  aspect-ratio: 4 / 5;
   width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 1rem;
 }
 
-/* Quiz */
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.start-button-wrapper {
+  margin-top: 1rem;
+}
+
+.start-button {
+  background: #28a745;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.start-button:hover {
+  background: #218838;
+}
+
+/* Quiz Section */
+#quiz-section {
+  background: #f0f0f0;
+  padding: 2rem 1rem;
+}
+
 .quiz-step {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 1.2rem;
+  border-radius: 12px;
+  padding: 1rem;
   margin-bottom: 1.5rem;
-  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .quiz-step img {
@@ -180,155 +122,104 @@ footer p {
 }
 
 .quiz-step label {
-  display: block;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #222;
 }
 
 .quiz-step input,
 .quiz-step select {
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 8px;
+  padding: 0.6rem;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
   margin-top: 0.5rem;
 }
 
-.quiz-step input:focus,
-.quiz-step select:focus {
-  border-color: #10b981;
-  outline: none;
-}
-
-/* Botão principal e "Ver meu resultado" */
-.start-button,
-.result-button {
-  background: linear-gradient(135deg, #34d399, #10b981);
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: 1.5rem;
-}
-
-.result-button:hover,
-.start-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.result-button-wrapper {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Modal resultados */
+/* Result Modal */
 .modal {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  padding: 1rem;
 }
 
 .modal-content {
   background: #fff;
   padding: 2rem;
-  border-radius: 14px;
+  border-radius: 12px;
   max-width: 500px;
-  width: 90%;
+  width: 100%;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  animation: fadeInUp 0.5s ease forwards;
 }
 
-/* Intro */
-.intro-text {
-  margin: 2rem auto;
-  max-width: 700px;
-  text-align: center;
-  padding: 1rem 1.5rem;
-  background: #ffffffcc;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.intro-text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.intro-text p {
+/* CTA button inside modal */
+#cta-button {
+  background: #007bff;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
   font-size: 1rem;
-  margin-bottom: 0.8rem;
-  color: #444;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
 }
 
-/* Cookie popup */
+#cta-button:hover {
+  background: #0056b3;
+}
+
+/* Cookie Notice */
 .cookie-notice {
-  display: none;
   position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  color: #333;
-  padding: 1.2rem 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 14px;
-  max-width: 90%;
-  width: 500px;
-  font-size: 0.95rem;
-  z-index: 9999;
-  flex-direction: column;
-  gap: 1rem;
-  opacity: 0;
-  animation: fadeInUp 0.6s ease 5s forwards;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
 }
 
 .cookie-notice a {
-  color: #0071e3;
-  text-decoration: none;
-}
-
-.cookie-notice a:hover {
+  color: #1e90ff;
   text-decoration: underline;
 }
 
 .cookie-notice button {
-  align-self: flex-end;
-  background: #0071e3;
+  background: #28a745;
   color: white;
   border: none;
-  padding: 0.6rem 1.4rem;
-  font-weight: 600;
-  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.cookie-notice button:hover {
-  background: #005bb5;
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-/* Fade animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  } to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
   }
-      }
+  .nav-links {
+    display: flex !important;
+    position: static;
+  }
+}
