@@ -384,3 +384,40 @@ footer p {
   border-radius: 10px;
   margin-bottom: 1rem;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav a {
+    margin: 0.5rem 1rem;
+  }
+}
