@@ -209,30 +209,38 @@ header .logo {
 /* Cookie Notice */
 .cookie-notice {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #facc15;
-  color: #111;
-  padding: 1rem;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   display: none;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  z-index: 999;
-}
-
-.cookie-notice a {
-  text-decoration: underline;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  max-width: 90%;
 }
 
 .cookie-notice button {
-  background: #f59e0b;
+  background-color: #007BFF; /* azul vibrante */
+  color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
-  color: white;
-  border-radius: 0.5rem;
-  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-notice button:hover {
+  background-color: #0056b3;
+                              }
+
+.cookie-notice a {
+  text-decoration: underline;
 }
 
 /* Footer */
