@@ -330,3 +330,10 @@ footer {
   outline: none;
 }
 
+.hero-img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
