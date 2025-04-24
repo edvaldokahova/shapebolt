@@ -5,221 +5,254 @@
   box-sizing: border-box;
 }
 
-/* Tipografia */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdfdfd;
   color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Header */
 header {
+  background: #111827;
+  color: #fff;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
-.logo {
+header .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
 .menu-toggle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: none;
   border: none;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-  top: 1.2rem;
-}
-
-.nav-links {
+  color: white;
   display: none;
-  gap: 1rem;
+  cursor: pointer;
 }
 
-.nav-links.active {
-  display: flex;
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1f2937;
+    flex-direction: column;
+    display: none;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
 }
 
-/* Hero Section */
+/* Hero */
 .imagem-destaque {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   text-align: center;
   padding: 2rem 1rem;
-  background: #fff;
 }
 
 .hero-img {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  max-width: 700px;
+  margin: 2rem auto;
 }
 
 .intro-text h2 {
   font-size: 2rem;
+  color: #0ea5e9;
   margin-bottom: 0.5rem;
 }
 
 .intro-text p {
   margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.1rem;
+  color: #374151;
 }
 
-.start-button-wrapper {
-  margin-top: 1rem;
-}
-
+/* Botões */
 .start-button {
-  background: #28a745;
-  color: white;
-  padding: 0.8rem 1.6rem;
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
   border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
 }
 
 .start-button:hover {
-  background: #218838;
+  transform: scale(1.05);
+  background: linear-gradient(to right, #0284c7, #0ea5e9);
 }
 
-/* Quiz Section */
+/* Quiz */
 #quiz-section {
-  background: #f0f0f0;
-  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 1rem;
 }
 
 .quiz-step {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .quiz-step img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 100px;
   margin-bottom: 1rem;
+  border-radius: 50%;
 }
 
 .quiz-step label {
-  font-weight: bold;
+  font-weight: 600;
+  display: block;
   margin-bottom: 0.5rem;
 }
 
 .quiz-step input,
 .quiz-step select {
   width: 100%;
-  padding: 0.6rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
   margin-top: 0.5rem;
+  transition: border-color 0.3s;
 }
 
-/* Result Modal */
+.quiz-step input:focus,
+.quiz-step select:focus {
+  border-color: #0ea5e9;
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 9999;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
 
 .modal-content {
-  background: #fff;
+  background: white;
   padding: 2rem;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 100%;
+  border-radius: 1rem;
+  max-width: 600px;
   text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* CTA button inside modal */
 #cta-button {
-  background: #007bff;
+  background: #16a34a;
   color: white;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 8px;
+  padding: 0.75rem 2rem;
   font-size: 1rem;
-  cursor: pointer;
+  border: none;
+  border-radius: 999px;
   margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
 #cta-button:hover {
-  background: #0056b3;
+  background: #15803d;
+  transform: scale(1.05);
 }
 
 /* Cookie Notice */
 .cookie-notice {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: #222;
-  color: #fff;
+  width: 100%;
+  background: #facc15;
+  color: #111;
   padding: 1rem;
   display: none;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  z-index: 999;
 }
 
 .cookie-notice a {
-  color: #1e90ff;
   text-decoration: underline;
 }
 
 .cookie-notice button {
-  background: #28a745;
-  color: white;
+  background: #f59e0b;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
-  background: #111;
-  color: #fff;
+  background: #111827;
+  color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
 }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
   }
-  .nav-links {
-    display: flex !important;
-    position: static;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-}
+  }
