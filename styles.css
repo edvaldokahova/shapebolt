@@ -205,10 +205,17 @@ header .logo {
   text-align: center;
 }
 
-.quiz-step img {
-  width: 100px;
+..quiz-step img {
+  width: 100%;
+  max-width: 500px; /* ou aumente para 600px se quiser mais */
+  height: auto;
+  border-radius: 12px;
   margin-bottom: 1rem;
-  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.quiz-step img:hover {
+  transform: scale(1.05);
 }
 
 .quiz-step label {
