@@ -28,9 +28,15 @@ header {
   position: relative;
 }
 
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo-right img {
+  height: 40px;
+  width: auto;
 }
 
 .nav-links {
@@ -73,9 +79,8 @@ header .logo {
   height: 4px;
   width: 100%;
   background-color: white;
-  margin: 5px 0;
+  margin: 4px 0;
   transition: 0.4s;
-  border-radius: 2px;
 }
 
 /* Animação para virar X */
