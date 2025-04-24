@@ -21,7 +21,11 @@
   <div class="images/logo.png">
   </div>
    
-<button class="menu-toggle" aria-label="Open navigation menu">&#9776;</button>
+<button class="menu-toggle" aria-label="Open navigation menu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
   <nav class="nav-links">
     <a href="about.html">About Us</a>
     <a href="produtos.html">More Products</a>
@@ -177,6 +181,8 @@
 
       menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+
+      menuToggle.classList.toggle('active'); // ativa a transformação para X
     });
   </script>
 </body>
