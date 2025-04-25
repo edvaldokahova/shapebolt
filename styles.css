@@ -59,17 +59,12 @@ header {
   background: none;
   border: none;
   color: white;
-  cursor: pointer;
-}
-
-.menu-toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
-  background: none;
-  border: none;
   cursor: pointer;
   z-index: 1001;
 }
