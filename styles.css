@@ -272,6 +272,11 @@ header {
   text-decoration: none;
 }
 
+.result-modal a {
+  color: #007bff;
+  text-decoration: none;
+}
+
 #cta-button {
   background: #16a34a;
   color: white;
