@@ -118,6 +118,9 @@ header {
     display: flex;
   }
 
+  .menu-toggle {
+  display: none;
+
   .nav-links {
     display: none;
     flex-direction: column;
