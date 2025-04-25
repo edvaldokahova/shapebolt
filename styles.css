@@ -296,7 +296,7 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: none;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   text-align: center;
   max-width: 90%;
@@ -317,7 +317,8 @@ header {
                               }
 
 .cookie-notice a {
-  text-decoration: underline;
+  color: #007bff; /* mesmo azul do botão */
+  text-decoration: none;
 }
 
 /* Footer */
