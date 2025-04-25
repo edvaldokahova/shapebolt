@@ -292,14 +292,15 @@ header {
   background-color: #ffffff;
   color: #333;
   padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: none;
   flex-direction: row;
-  gap: 10px;
+  gap: 1rem;
   text-align: center;
-  max-width: 90%;
+  width: 90%;
+  max-width: 900px;
 }
 
 .cookie-notice button {
@@ -341,4 +342,12 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-  }
+}
+
+.page-content {
+  max-width: 800px;
+  margin: 100px auto 50px auto;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
