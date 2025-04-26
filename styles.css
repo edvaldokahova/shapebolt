@@ -80,7 +80,7 @@ header {
 
 /* Animação robusta para virar X */
 .menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(8px, 8px);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -89,7 +89,7 @@ header {
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 @media (max-width: 768px) {
@@ -223,7 +223,7 @@ header {
   right: 0;
   bottom: 0;
   background: rgba(0,0,0,0.7);
-  z-index: 999;
+  z-index: 10000;
   justify-content: center;
   align-items: center;
 }
