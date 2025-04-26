@@ -75,24 +75,24 @@ header {
   background-color: white;
   margin: 5px 0;
   border-radius: 2px;
-  transition: all 0.4s ease; /* animação mais fluida */
+  transition: all 0.4s ease;
 }
 
 /* Animação para virar X */
 .menu-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .menu-toggle.active .bar:nth-child(2) {
   opacity: 0;
 }
-
 .menu-toggle.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+/* Responsivo */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
@@ -111,15 +111,6 @@ header {
     animation: fadeIn 0.3s ease-in-out;
   }
 }
-
-/* Exibir o botão só em telas menores */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .menu-toggle {
-  display: none;
 
   .nav-links {
     display: none;
