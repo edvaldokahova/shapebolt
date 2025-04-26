@@ -78,6 +78,12 @@ header {
   transform-origin: center;
 }
 
+/* Transformação para X com ajuste de comprimento */
+.menu-toggle.active .bar:nth-child(1),
+.menu-toggle.active .bar:nth-child(3) {
+  width: 22px; /* encurta durante o X */
+}
+
 /* Animação robusta para virar X */
 .menu-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
