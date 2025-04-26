@@ -100,7 +100,7 @@ header {
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
+    display: none;
   }
 
   .nav-links {
