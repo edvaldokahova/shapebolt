@@ -36,7 +36,7 @@ header {
 }
 
 .logo-right img {
-  height: 50px;
+  height: 57px;
   width: auto;
 }
 
@@ -80,7 +80,7 @@ header {
 
 /* Animação robusta para virar X */
 .menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(2px, 2px);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -89,7 +89,7 @@ header {
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(2px, -2px);
 }
 
 @media (max-width: 768px) {
@@ -240,6 +240,15 @@ header {
 .modal-content a {
   color: #007bff;
   text-decoration: none;
+}
+
+/* Imagem de destaque no topo */
+
+.modal-content img.feature-image {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
 }
 
 .result-modal a {
