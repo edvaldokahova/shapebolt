@@ -81,7 +81,7 @@ header {
 /* Transformação para X com ajuste de comprimento */
 .menu-toggle.active .bar:nth-child(1),
 .menu-toggle.active .bar:nth-child(3) {
-  width: 22px; /* encurta durante o X */
+  width: 20px; /* encurta durante o X */
 }
 
 /* Animação robusta para virar X */
@@ -222,7 +222,7 @@ header {
 
 /* Modal */
 .modal {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
