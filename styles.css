@@ -104,6 +104,15 @@ header {
   }
 }
 
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+  }
+}
+
   .nav-links {
     position: absolute;
     top: 100%;
