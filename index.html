@@ -170,7 +170,9 @@
       else if (imc < 29.9) imcClassificacao = 'overweight';
       else imcClassificacao = 'obese';
 
-      let recomendacao = `Your BMI is <strong>${imc}</strong> (${imcClassificacao}). `;
+      let recomendacao = `
+      <img src="images/imagemx.jpg" alt="Destaque" class="feature-image">
+      Your BMI is <strong>${imc}</strong> (${imcClassificacao}). `;
       recomendacao += `<p>Based on your answers, we identified that <strong>AeroSlim</strong> can help with `;
       recomendacao += problema === 'tudo' ? 'all the challenges mentioned' : `the issue of <strong>${problema}</strong>`;
       recomendacao += ` and achieving your goal of <strong>${objetivo}</strong>.</p>`;
