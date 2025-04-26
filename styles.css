@@ -98,10 +98,11 @@ header {
   transform: rotate(-45deg) translate(8px, -8px);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .menu-toggle {
     display: none;
   }
+}
 
   .nav-links {
     position: absolute;
@@ -115,7 +116,7 @@ header {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; {
   }
 }
 
