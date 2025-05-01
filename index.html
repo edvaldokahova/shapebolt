@@ -201,11 +201,14 @@
     <script src="//code.tidio.co/ak5yrri9hlblucex4yukl0iuefod9yzx.js" async>
     </script>
 
-    <script>
+  <script>
   const initialStock = 80;
   const minStock = 5;
   const storageKey = 'aeroslimVisits';
+  const countdownKey = 'aeroslimCountdownEnd';
+  const countdownSeconds = 48 * 60 * 60; // 48 horas
 
+  // Simular redução de estoque por visita
   function getSimulatedStock() {
     let visits = parseInt(localStorage.getItem(storageKey)) || 0;
     visits++;
@@ -231,30 +234,40 @@
 
     // Countdown trigger
     if (message.includes("countdown-timer")) {
-      startCountdown(48 * 60 * 60); // 48 horas
+      startCountdown();
     }
 
     setTimeout(() => {
       notification.remove();
-    }, 7000);
+    }, 15000); // Aumentado para durar mais
   }
 
-  function startCountdown(durationInSeconds) {
+  function startCountdown() {
     const timerElement = document.getElementById("countdown-timer");
     if (!timerElement) return;
 
-    let remaining = durationInSeconds;
+    let endTime = localStorage.getItem(countdownKey);
+
+    if (!endTime) {
+      endTime = Date.now() + countdownSeconds * 1000;
+      localStorage.setItem(countdownKey, endTime);
+    } else {
+      endTime = parseInt(endTime);
+    }
 
     const updateTimer = () => {
+      const remaining = Math.floor((endTime - Date.now()) / 1000);
+      if (remaining < 0) {
+        timerElement.textContent = "00:00:00";
+        return;
+      }
+
       const hours = String(Math.floor(remaining / 3600)).padStart(2, '0');
       const minutes = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
       const seconds = String(remaining % 60).padStart(2, '0');
       timerElement.textContent = `${hours}:${minutes}:${seconds}`;
-      remaining--;
 
-      if (remaining >= 0) {
-        setTimeout(updateTimer, 1000);
-      }
+      setTimeout(updateTimer, 1000);
     };
 
     updateTimer();
@@ -264,9 +277,9 @@
     messages.forEach((message, index) => {
       setTimeout(() => {
         showNotification(message);
-      }, 7000 * index);
+      }, 9000 * index); // Notificações mais espaçadas
     });
   });
-    </script>
+  </script>
 </body>
   </html>
