@@ -358,47 +358,25 @@ main {
   font-family: 'Segoe UI', sans-serif;
 }
 
-.notification-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 99999;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .notification {
   background-color: #1f2937;
-  color: #fff;
-  padding: 12px 16px;
+  color: white;
+  padding: 1rem 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  animation: slideIn 0.5s ease, fadeOut 1s ease 6s forwards;
-  font-size: 14px;
-  max-width: 280px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 15px;
+  animation: fadeInOut 14s ease-in-out forwards;
 }
 
-.countdown-timer {
+.notification span {
+  color: #1e90ff; /* Azul do contador */
   font-weight: bold;
-  color: #3B82F6; /* azul vibrante */
-  margin-left: 10px;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
 }
