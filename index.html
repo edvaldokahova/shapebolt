@@ -32,6 +32,8 @@
     <a href="mailto:contact@aeroslim-product.com?subject=Contact%20via%20Shapebolt&body=Hello%2C%20I%20would%20like%20to%20know%20more%20about...">Contact</a>
   </nav>
 
+    <div id="notification-container" class="notification-container"></div>
+
      <div class="logo-right">
       <img src="images/logo.png" alt="Shapebolt Logo">
      </div>
@@ -197,6 +199,74 @@
   </script>
 
     <script src="//code.tidio.co/ak5yrri9hlblucex4yukl0iuefod9yzx.js" async>
+    </script>
+
+    <script>
+  const initialStock = 80;
+  const minStock = 5;
+  const storageKey = 'aeroslimVisits';
+
+  function getSimulatedStock() {
+    let visits = parseInt(localStorage.getItem(storageKey)) || 0;
+    visits++;
+    localStorage.setItem(storageKey, visits);
+    return Math.max(minStock, initialStock - Math.floor(visits / 2));
+  }
+
+  const stock = getSimulatedStock();
+
+  const messages = [
+    `Only ${stock} AeroSlim left in stock for the US!`,
+    "Hurry! AeroSlim is selling fast in Canada.",
+    "Someone from the UK just ordered AeroSlim.",
+    "The offer is ending soon! <span id='countdown-timer'></span>"
+  ];
+
+  function showNotification(message) {
+    const container = document.getElementById("notification-container");
+    const notification = document.createElement("div");
+    notification.className = "notification";
+    notification.innerHTML = message;
+    container.appendChild(notification);
+
+    // Countdown trigger
+    if (message.includes("countdown-timer")) {
+      startCountdown(48 * 60 * 60); // 48 horas
+    }
+
+    setTimeout(() => {
+      notification.remove();
+    }, 7000);
+  }
+
+  function startCountdown(durationInSeconds) {
+    const timerElement = document.getElementById("countdown-timer");
+    if (!timerElement) return;
+
+    let remaining = durationInSeconds;
+
+    const updateTimer = () => {
+      const hours = String(Math.floor(remaining / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
+      const seconds = String(remaining % 60).padStart(2, '0');
+      timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+      remaining--;
+
+      if (remaining >= 0) {
+        setTimeout(updateTimer, 1000);
+      }
+    };
+
+    updateTimer();
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    messages.forEach((message, index) => {
+      setTimeout(() => {
+        showNotification(message);
+      }, 7000 * index);
+    });
+  });
     </script>
 </body>
   </html>
