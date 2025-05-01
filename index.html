@@ -32,9 +32,9 @@
     <a href="mailto:contact@aeroslim-product.com?subject=Contact%20via%20Shapebolt&body=Hello%2C%20I%20would%20like%20to%20know%20more%20about...">Contact</a>
   </nav>
 
-    <div id="notification-container" class="notification-container"></div>
-
-     <div class="logo-right">
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 10000;"></div>
+     
+    <div class="logo-right">
       <img src="images/logo.png" alt="Shapebolt Logo">
      </div>
   </header>
@@ -204,27 +204,52 @@
   <script>
   const initialStock = 80;
   const minStock = 5;
-  const storageKey = 'aeroslimVisits';
+  const stockKey = 'aeroslimVisits';
   const countdownKey = 'aeroslimCountdownEnd';
-  const countdownSeconds = 48 * 60 * 60; // 48 horas
 
-  // Simular redução de estoque por visita
+  // Gerar estoque com base nas visitas
   function getSimulatedStock() {
-    let visits = parseInt(localStorage.getItem(storageKey)) || 0;
+    let visits = parseInt(localStorage.getItem(stockKey)) || 0;
     visits++;
-    localStorage.setItem(storageKey, visits);
+    localStorage.setItem(stockKey, visits);
     return Math.max(minStock, initialStock - Math.floor(visits / 2));
   }
 
-  const stock = getSimulatedStock();
+  // Criar ou manter o contador regressivo de 48 horas
+  function getCountdownEnd() {
+    let end = localStorage.getItem(countdownKey);
+    if (!end) {
+      end = Date.now() + 48 * 60 * 60 * 1000; // 48h
+      localStorage.setItem(countdownKey, end);
+    }
+    return parseInt(end);
+  }
 
-  const messages = [
-    `Only ${stock} AeroSlim left in stock for the US!`,
-    "Hurry! AeroSlim is selling fast in Canada.",
-    "Someone from the UK just ordered AeroSlim.",
-    "The offer is ending soon! <span id='countdown-timer'></span>"
-  ];
+  function startCountdown() {
+    const timerElement = document.getElementById("countdown-timer");
+    if (!timerElement) return;
+    const endTime = getCountdownEnd();
 
+    function updateTimer() {
+      const now = Date.now();
+      let diff = Math.floor((endTime - now) / 1000);
+
+      if (diff < 0) diff = 0;
+
+      const hours = String(Math.floor(diff / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+      const seconds = String(diff % 60).padStart(2, '0');
+      timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+
+      if (diff > 0) {
+        setTimeout(updateTimer, 1000);
+      }
+    }
+
+    updateTimer();
+  }
+
+  // Exibir uma notificação
   function showNotification(message) {
     const container = document.getElementById("notification-container");
     const notification = document.createElement("div");
@@ -232,53 +257,37 @@
     notification.innerHTML = message;
     container.appendChild(notification);
 
-    // Countdown trigger
     if (message.includes("countdown-timer")) {
       startCountdown();
     }
 
     setTimeout(() => {
       notification.remove();
-    }, 15000); // Aumentado para durar mais
+    }, 14000);
   }
 
-  function startCountdown() {
-    const timerElement = document.getElementById("countdown-timer");
-    if (!timerElement) return;
+  // Inicializar ciclo de notificações
+  function cycleNotifications() {
+    const stock = getSimulatedStock();
+    const messages = [
+      `Only ${stock} AeroSlim left in stock for the US!`,
+      "Hurry! AeroSlim is selling fast in Canada.",
+      "Someone from the UK just ordered AeroSlim.",
+      "The offer is ending soon! <span id='countdown-timer'></span>"
+    ];
 
-    let endTime = localStorage.getItem(countdownKey);
-
-    if (!endTime) {
-      endTime = Date.now() + countdownSeconds * 1000;
-      localStorage.setItem(countdownKey, endTime);
-    } else {
-      endTime = parseInt(endTime);
+    let index = 0;
+    function nextMessage() {
+      showNotification(messages[index]);
+      index = (index + 1) % messages.length;
+      setTimeout(nextMessage, 14000);
     }
 
-    const updateTimer = () => {
-      const remaining = Math.floor((endTime - Date.now()) / 1000);
-      if (remaining < 0) {
-        timerElement.textContent = "00:00:00";
-        return;
-      }
-
-      const hours = String(Math.floor(remaining / 3600)).padStart(2, '0');
-      const minutes = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
-      const seconds = String(remaining % 60).padStart(2, '0');
-      timerElement.textContent = `${hours}:${minutes}:${seconds}`;
-
-      setTimeout(updateTimer, 1000);
-    };
-
-    updateTimer();
+    nextMessage();
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    messages.forEach((message, index) => {
-      setTimeout(() => {
-        showNotification(message);
-      }, 9000 * index); // Notificações mais espaçadas
-    });
+    cycleNotifications();
   });
   </script>
 </body>
