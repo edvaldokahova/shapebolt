@@ -145,7 +145,8 @@
         </select>
       </div>
 
-      <button type="submit" class="start-button">See my result</button>
+      <button type="submit" class="start-button" onclick="fbq('track', 'Lead'); setTimeout(() => { abrirModalOuRedirecionar(); }, 300)">
+      See my result </button>
     </form>
   </section>
 
@@ -200,7 +201,7 @@
 
       recomendacao += `<p><em>Note:</em> While AeroSlim is 100% safe for most people, if you are <strong>breastfeeding, pregnant, or have a specific medical condition</strong>, please <a href='https://www.healthtap.com/telehealth/' target='_blank'>consult a healthcare professional</a>.</p>`;
 
-      recomendacao += `<a href='#' onclick="fbq('track', 'Lead'); setTimeout(function() { window.open('https://aeroslim24.com/text.php#aff=edvaldocahova', '_blank'); }, 300); return false;">
+      recomendacao += `<a href='#' onclick="setTimeout(function() { window.open('https://aeroslim24.com/text.php#aff=edvaldocahova', '_blank'); }, 300); return false;">
       <button id='cta-button'>Get My AeroSlim</button>
       </a>`;
       
