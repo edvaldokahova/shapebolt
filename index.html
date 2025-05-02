@@ -204,7 +204,13 @@
 
       document.getElementById('modal-content').innerHTML = recomendacao;
       document.getElementById('result-modal').style.display = 'block';
-    });
+      
+      // Pixel do Meta: dispara evento Lead no clique do botão
+      document.getElementById('cta-button').addEventListener('click', function() {
+      if (typeof fbq === 'function') {
+      fbq('track', 'Lead');
+      }
+     });
 
     
       const menuToggle = document.querySelector('.menu-toggle');
