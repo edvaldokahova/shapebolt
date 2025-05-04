@@ -427,3 +427,15 @@ main {
   color: #1e90ff; /* Azul do contador */
   font-weight: bold;
 }
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.with-icon .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
