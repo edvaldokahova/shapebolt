@@ -880,3 +880,10 @@ y: flex;
   height: 16px;
   margin-right: 8px;
 }
+
+@media (min-width: 768px) {
+  .quiz-option i {
+    font-size: 32px; /* ajuste conforme o desejado */
+    margin-right: 12px; /* espaço entre o ícone e o texto */
+  }
+}
