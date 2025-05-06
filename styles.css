@@ -866,9 +866,9 @@ main {
 }
 
 .with-icon .icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  margin-right: 9px;
 }
 y: flex;
   align-items: center;
@@ -876,9 +876,9 @@ y: flex;
 }
 
 .with-icon .icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  margin-right: 9px;
 }
 
 @media (min-width: 768px) {
