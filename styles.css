@@ -903,11 +903,11 @@ y: flex;
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: #add8e6; /* azul bebê */
-  color: #000;
+  background-color: #80f9f7; /* azul bebê */
+  color: #ffffff;
   border: none;
   padding: 10px 16px;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
