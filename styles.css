@@ -887,3 +887,40 @@ y: flex;
     margin-right: 12px; /* espaço entre o ícone e o texto */
   }
 }
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #add8e6; /* azul bebê */
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Animação pulse */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 1.6s infinite;
+}
