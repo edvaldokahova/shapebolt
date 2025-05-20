@@ -116,9 +116,8 @@ header {
   }
 
   .nav-links.active {
-    display: flex; {
+    display: flex;
   }
-}
 
 /* Hero */
 .imagem-destaque {
@@ -923,4 +922,27 @@ y: flex;
 
 .pulse {
   animation: pulse 1.6s infinite;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Deixe o resto do cabeçalho como está, ele rolará normalmente */
+.hero-content {
+  margin-top: 80px; /* só se necessário para não sobrepor o menu fixo */
 }
