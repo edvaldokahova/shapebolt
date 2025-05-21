@@ -454,7 +454,7 @@ font-size: 1.1rem;
 }
 
 @media (min-width: 769px) {
-  .with-icon .icon {
+  .with-icon {
     display: flex;
     align-items: center;
     font-size: 9.1rem; /* tamanho de texto ideal para desktop */
@@ -462,8 +462,8 @@ font-size: 1.1rem;
   }
 
   .with-icon .icon {
-    width: 36px;
-    height: 36px;
+    width: 39px;
+    height: 39px;
   }
 }
 
