@@ -490,7 +490,6 @@ position: absolute;
 bottom: 10px;
 right: 10px;
 background: linear-gradient(to right, #83ffff, #288086);
-background: #83ffff; /* fallback */
 color: #ffffff;
 border: none;
 padding: 10px 16px;
@@ -503,6 +502,7 @@ opacity: 1;
 }
 
 .image-button:hover {
+transform: scale(1.05);
 background: linear-gradient(to right, #288086, #83ffff);
 }
 
