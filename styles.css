@@ -457,13 +457,13 @@ font-size: 1.1rem;
   .with-icon {
     display: flex;
     align-items: center;
-    font-size: 1.2rem; /* tamanho de texto ideal para desktop */
+    font-size: 2.1rem; /* tamanho de texto ideal para desktop */
     gap: 12px; /* espaço entre o ícone e o texto */
   }
 
   .with-icon .icon {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
   }
 }
 
