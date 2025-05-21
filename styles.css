@@ -454,10 +454,10 @@ font-size: 1.1rem;
 }
 
 @media (min-width: 769px) {
-  .with-icon {
+  p.with-icon {
     display: flex;
     align-items: center;
-    font-size: 22px; /* tamanho de texto ideal para desktop */
+    font-size: 32px; /* tamanho de texto ideal para desktop */
     gap: 13px; /* espaço entre o ícone e o texto */
   }
 
