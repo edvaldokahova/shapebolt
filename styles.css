@@ -490,6 +490,7 @@ position: absolute;
 bottom: 10px;
 right: 10px;
 background: linear-gradient(to right, #0ea5e9, #38bdf8);
+background: #0ea5e9; /* fallback */
 color: #ffffff;
 border: none;
 padding: 10px 16px;
@@ -498,6 +499,7 @@ cursor: pointer;
 font-weight: bold;
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 z-index: 2;
+opacity: 1;
 }
 
 .image-button:hover {
