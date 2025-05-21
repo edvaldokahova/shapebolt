@@ -489,7 +489,7 @@ height: auto;
 position: absolute;
 bottom: 10px;
 right: 10px;
-background-color: linear-gradient(to right, #0ea5e9, #38bdf8); /* azul bebê */
+background: linear-gradient(to right, #0ea5e9, #38bdf8);
 color: #ffffff;
 border: none;
 padding: 10px 16px;
@@ -498,6 +498,10 @@ cursor: pointer;
 font-weight: bold;
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 z-index: 2;
+}
+
+.image-button:hover {
+background: linear-gradient(to right, #0284c7, #0ea5e9);
 }
 
 /* Animação pulse */
