@@ -366,8 +366,8 @@ font-size: 14px;
 }
 
 .footer-links a {
-color: #fff; /* branco /
-text-decoration: underline; / sempre sublinhado */
+color: #fff; /* branco */
+text-decoration: underline; /* sempre sublinhado */
 margin: 0 10px;
 transition: color 0.3s ease;
 }
@@ -465,8 +465,8 @@ margin-right: 7px;
 
 @media (min-width: 768px) {
 .quiz-option i {
-font-size: 32px; /* ajuste conforme o desejado /
-margin-right: 12px; / espaço entre o ícone e o texto */
+font-size: 32px; /* ajuste conforme o desejado */
+margin-right: 12px; /* espaço entre o ícone e o texto */
 }
 }
 
