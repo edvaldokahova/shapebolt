@@ -489,8 +489,8 @@ height: auto;
 position: absolute;
 bottom: 10px;
 right: 10px;
-background: linear-gradient(to right, #0ea5e9, #38bdf8);
-background: #0ea5e9; /* fallback */
+background: linear-gradient(to right, #83ffff, #288086);
+background: #83ffff; /* fallback */
 color: #ffffff;
 border: none;
 padding: 10px 16px;
@@ -503,7 +503,7 @@ opacity: 1;
 }
 
 .image-button:hover {
-background: linear-gradient(to right, #0284c7, #0ea5e9);
+background: linear-gradient(to right, #288086, #83ffff);
 }
 
 /* Animação pulse */
