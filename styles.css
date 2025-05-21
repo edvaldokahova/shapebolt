@@ -1,6 +1,6 @@
 /* Reset básico */
 
-{
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -303,6 +303,7 @@ gap: 1rem;
 text-align: center;
 width: 90%;
 max-width: 900px;
+padding-inline: 1rem;
 }
 
 .cookie-notice button {
