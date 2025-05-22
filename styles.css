@@ -450,7 +450,7 @@ margin-right: 8px;
 .with-icon {
 display: flex;
 align-items: center;
-font-size: 1.1rem;
+font-size: 1.8rem;
 }
 
 @media (min-width: 769px) {
