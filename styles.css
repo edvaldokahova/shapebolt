@@ -153,8 +153,9 @@ margin: 2rem auto;
 
 .intro-text h2 {
 font-size: 2rem;
-color: #0ea5e9;
-margin-bottom: 0.5rem;
+color: #0d9998;
+margin-bottom: 1.1rem;
+text-align: left;
 }
 
 .intro-text p {
@@ -172,7 +173,7 @@ margin-top: 2rem;
 }
 
 .start-button {
-background: linear-gradient(to right, #0ea5e9, #38bdf8);
+background: linear-gradient(to right, #0d9998, #3fabaa);
 border: none;
 color: white;
 padding: 1rem 2rem;
@@ -186,7 +187,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 
 .start-button:hover {
 transform: scale(1.05);
-background: linear-gradient(to right, #0284c7, #0ea5e9);
+background: linear-gradient(to right, #3fabaa, #0d9998);
 }
 
 /* Quiz */
@@ -278,7 +279,7 @@ text-decoration: none;
 }
 
 #cta-button {
-background: #16a34a;
+background: #0d9998;
 color: white;
 padding: 0.75rem 2rem;
 font-size: 1rem;
@@ -289,8 +290,8 @@ transition: background 0.3s, transform 0.2s;
 }
 
 #cta-button:hover {
-background: #15803d;
-transform: scale(1.05);
+background: #3fabaa;
+transform: scale(1.10);
 }
 
 /* Cookie Notice */
@@ -457,13 +458,13 @@ font-size: 1.8rem;
   p.with-icon {
     display: flex;
     align-items: center;
-    font-size: 30px; /* tamanho de texto ideal para desktop */
-    gap: 9px; /* espaço entre o ícone e o texto */
+    font-size: 25px; /* tamanho de texto ideal para desktop */
+    gap: 7px; /* espaço entre o ícone e o texto */
   }
 
   .with-icon .icon {
-    width: 39px;
-    height: 39px;
+    width: 38px;
+    height: 38px;
   }
 }
 
