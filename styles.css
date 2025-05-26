@@ -114,7 +114,7 @@ color: #272727;
 /* Transformação para X com ajuste de comprimento */
 .menu-toggle.active .bar:nth-child(1),
 .menu-toggle.active .bar:nth-child(3) {
-width: 18px; / encurta durante o X */
+width: 22px; / encurta durante o X */
 }
 
 /* Animação robusta para virar X */
