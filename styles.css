@@ -119,16 +119,16 @@ width: 21px; / encurta durante o X */
 
 /* Animação robusta para virar X */
 .menu-toggle.active .bar:nth-child(1) {
-transform: rotate(44deg) translate(5px, 5px);
+transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
 opacity: 0;
-transform: translateX(-21px);
+transform: translateX(-20px);
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-transform: rotate(-44deg) translate(5px, -5px);
+transform: rotate(-45deg) translate(5px, -5px);
 }
 
 
