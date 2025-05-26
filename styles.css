@@ -90,7 +90,7 @@ transition: color 0.3s;
 }
 
 .nav-links a:hover {
-color: #272727;
+color: #0d9998;
 }
 
 @media (min-width: 769px) {
