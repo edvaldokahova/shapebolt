@@ -24,7 +24,7 @@ color: inherit;
 header {
 background: #272727;
 color: #272727;
-padding: 0,5rem 2rem;
+padding: 1rem 2rem;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -114,7 +114,7 @@ color: #272727;
 /* Transformação para X com ajuste de comprimento */
 .menu-toggle.active .bar:nth-child(1),
 .menu-toggle.active .bar:nth-child(3) {
-width: 18px; / encurta durante o X */
+width: 21px; / encurta durante o X */
 }
 
 /* Animação robusta para virar X */
@@ -124,7 +124,7 @@ transform: rotate(45deg) translate(5px, 5px);
 
 .menu-toggle.active .bar:nth-child(2) {
 opacity: 0;
-transform: translateX(-20px);
+transform: translateX(-21px);
 }
 
 .menu-toggle.active .bar:nth-child(3) {
