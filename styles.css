@@ -412,6 +412,7 @@ max-width: 300px;
 font-family: Arial, sans-serif;
 font-size: 0.95rem;
 position: relative;
+align-items: center
 }
 
 .notification .timer {
