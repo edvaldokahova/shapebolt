@@ -566,3 +566,8 @@ animation: pulse 1.6s infinite;
   display: block;
   animation: menuSlideIn 0.4s ease forwards;
 }
+
+.highlight-viewers {
+  color: #0d9998; /* Substitua por qualquer cor que desejar */
+  font-weight: bold;
+}
