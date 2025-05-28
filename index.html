@@ -531,6 +531,11 @@
     return parseInt(end);
   }
 
+  function getRandomViewersMessage() {
+  const viewers = Math.floor(Math.random() * (151 - 86 + 1)) + 86;
+  return `<span class="highlight-viewers">${viewers}</span> people are viewing this offer right now!`;
+  }
+
   function startCountdown() {
     const timerElement = document.getElementById("countdown-timer");
     if (!timerElement) return;
@@ -576,10 +581,11 @@
   function cycleNotifications() {
     const stock = getSimulatedStock();
     const messages = [
-      `Only ${stock} AeroSlim left in stock for the US! 🇺🇸`,
+      `Only <strong>${stock}</strong> AeroSlim left in stock for the US! 🇺🇸`,
       "Hurry! AeroSlim is selling fast in Canada 🇨🇦",
       "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Someone from the UK just ordered AeroSlim.",
       "The offer is ending soon! <span id='countdown-timer'></span>"
+       getRandomViewersMessage // ← nova mensagem dinâmica
     ];
 
     let index = 0;
