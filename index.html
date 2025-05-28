@@ -576,10 +576,10 @@
   function cycleNotifications() {
     const stock = getSimulatedStock();
     const messages = [
-      `Only ${stock} AeroSlim left in stock for the US! 🇺🇸`,
+      `Only <strong>${stock}</strong> AeroSlim left in stock for the US! 🇺🇸`,
       "Hurry! AeroSlim is selling fast in Canada 🇨🇦",
       "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Someone from the UK just ordered AeroSlim.",
-      "The offer is ending soon! <span id='countdown-timer'></span>"
+      "The offer is ending soon! <span id='countdown-timer'></span>",
       `${Math.floor(Math.random() * (151 - 86 + 1) + 86)} <span class="highlight-viewers">people are viewing this offer right now!</span>`
     ];
 
