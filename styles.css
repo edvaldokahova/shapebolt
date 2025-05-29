@@ -32,6 +32,20 @@ position: relative;
 z-index: 9997;       /* garantir que fique por cima */
 }
 
+.imagem-destaque {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.imagem-destaque img.hero-img {
+  width: 100vw;           /* ocupa toda a largura da tela */
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .logo-right {
 margin-left: auto;
 display: flex;
