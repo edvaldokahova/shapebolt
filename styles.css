@@ -580,7 +580,7 @@ animation: pulse 1.6s infinite;
 .order-banner {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background-color: #e53935; /* vermelho */
   color: white;
   padding: 6px 14px;
@@ -591,7 +591,7 @@ animation: pulse 1.6s infinite;
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 1s ease, transform 1s ease;
-  z-index: 10;
+  z-index: 2;
 }
 
 .order-banner.visible {
