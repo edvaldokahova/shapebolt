@@ -146,6 +146,7 @@
     <div class="image-container">
     <img src="images/inicio20.jpg" alt="AeroSlim Highlight" class="hero-img">
       <a href="https://aeroslim24.com/text.php#aff=edvaldocahova" class="image-button pulse">⚡ Buy now</a>
+      <div id="order-banner" class="order-banner">19 ORDERS CONFIRMED IN THE LAST 12h</div>
     </div>
     <div class="intro-text">
       <h2>Getting Started with AeroSlim</h2>
@@ -535,19 +536,48 @@
   const element = document.getElementById("live-viewers-count");
   if (!element) return;
 
-  function changeNumber() {
-    const randomNumber = Math.floor(Math.random() * (151 - 86 + 1)) + 86;
-    element.textContent = randomNumber;
+  const sessionStart = sessionStorage.getItem("aeroslimSessionStart") || Date.now();
+  sessionStorage.setItem("aeroslimSessionStart", sessionStart);
+
+  let viewers = Math.floor(Math.random() * (120 - 91 + 1)) + 91;
+
+  function increaseViewers() {
+    const timeSpent = Math.floor((Date.now() - sessionStart) / 1000); // em segundos
+    const maxViewers = 407;
+
+    // Lógica de crescimento suave: aumenta 1 a cada 8-12 segundos
+    if (viewers < maxViewers && timeSpent > 10) {
+      viewers += Math.random() < 0.7 ? 1 : 0; // crescimento mais provável, mas não sempre
+    }
+
+    element.textContent = viewers;
   }
 
-  changeNumber(); // inicial
-  const interval = setInterval(changeNumber, 3000); // muda a cada 3 segundos
+  // Atualiza a cada 5 segundos
+  increaseViewers(); // inicial
+  const interval = setInterval(increaseViewers, 5000);
 
-  // Para parar a atualização depois que a notificação some (20s)
+  // Para parar a atualização quando a notificação some (20s)
   setTimeout(() => {
     clearInterval(interval);
   }, 20000);
  }
+
+  function getSoldCount() {
+  const baseSold = 1584;
+  const firstTimestampKey = 'aeroslimSoldStart';
+
+  let start = localStorage.getItem(firstTimestampKey);
+  if (!start) {
+    start = Date.now();
+    localStorage.setItem(firstTimestampKey, start);
+  }
+
+  const now = Date.now();
+  const hoursPassed = Math.floor((now - start) / (1000 * 60 * 60));
+  const increments = Math.floor(hoursPassed / 9);
+  return baseSold + (increments * 3);
+  }
     
   function startCountdown() {
     const timerElement = document.getElementById("countdown-timer");
@@ -573,6 +603,41 @@
     updateTimer();
   }
 
+  const banner = document.getElementById("order-banner");
+
+  function getRandomOrderCount() {
+    const min = 6;
+    const max = 30;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Define número fixo por dia
+  const today = new Date().toDateString();
+  const storedDate = localStorage.getItem("orderBannerDate");
+  let orderCount = parseInt(localStorage.getItem("orderBannerCount"));
+
+  if (storedDate !== today || isNaN(orderCount)) {
+    orderCount = getRandomOrderCount();
+    localStorage.setItem("orderBannerCount", orderCount);
+    localStorage.setItem("orderBannerDate", today);
+  }
+
+  // Atualiza texto da faixa
+  banner.textContent = `${orderCount} ORDERS CONFIRMED IN THE LAST 12h`;
+
+  // Mostrar com IntersectionObserver
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        banner.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(banner);
+    
   // Exibir uma notificação
   function showNotification(message) {
     const container = document.getElementById("notification-container");
@@ -598,9 +663,10 @@
   function cycleNotifications() {
     const stock = getSimulatedStock();
     const messages = [
-      `Only <span class="highlight-stock">${stock}</span> AeroSlim left in stock for the US! 🇺🇸`,
-      "The offer is ending soon! <span id='countdown-timer'></span>",
-      '👀 <span id="live-viewers-count" class="highlight-viewers-number"></span> people are viewing this offer right now!'
+      '👀 <span id="live-viewers-count" class="highlight-viewers-number"></span> people are watching this!',
+      `🇺🇸 <span class="highlight-sold">${getSoldCount()}</span> sold (More than 20 available)`,
+      "The offer is ending soon! <span id='countdown-timer'></span>"
+      "↩️ <strong>No worries.</strong> We take returns!"
     ];
 
     let index = 0;
