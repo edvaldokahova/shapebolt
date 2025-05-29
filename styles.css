@@ -583,8 +583,8 @@ animation: pulse 1.6s infinite;
   left: 10px;
   background-color: #e53935; /* vermelho */
   color: white;
-  padding: 3px 7px;
-  font-size: 9px;
+  padding: 4px 7px;
+  font-size: 10px;
   font-weight: bold;
   border-radius: 999px;
   white-space: nowrap;
