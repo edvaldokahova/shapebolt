@@ -647,13 +647,6 @@
     }, 20000);
   }
 
-  // Inicializar ciclo de notificações
-  function cycleNotifications() {
-    const stock = getSimulatedStock();
-    const messages = [
-      "The offer is ending soon! <span id='countdown-timer'></span>"
-    ];
-
     let index = 0;
     function nextMessage() {
       showNotification(messages[index]);
