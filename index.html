@@ -651,17 +651,14 @@
   function cycleNotifications() {
     const stock = getSimulatedStock();
     const messages = [
-      '👀 <span id="live-viewers-count" class="highlight-viewers-number"></span> people are watching this!',
-      `🇺🇸 <span class="highlight-sold">${getSoldCount()}</span> sold → Over 20 left!`,
-      "The offer is ending soon! <span id='countdown-timer'></span>",
-      "↩️ <strong>No worries.</strong> We take returns!"
+      "The offer is ending soon! <span id='countdown-timer'></span>"
     ];
 
     let index = 0;
     function nextMessage() {
       showNotification(messages[index]);
       index = (index + 1) % messages.length;
-      setTimeout(nextMessage, 29000);
+      setTimeout(nextMessage, 25000);
     }
 
     nextMessage();
@@ -670,7 +667,7 @@
   window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     cycleNotifications();
-  }, 20000);
+  }, 50000);
 });
 
     src="scripts/main.js"
